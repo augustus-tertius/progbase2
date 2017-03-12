@@ -2,7 +2,7 @@
     // See https://go.microsoft.com/fwlink/?LinkId=733558
     // for the documentation about the tasks.json format
     "version": "0.1.0",
-    "command": "make",
+    "command": "gnome-terminal --tab -e \"/bin/bash -c 'valgrind --leak-check=yes ./build/lab4; exec /bin/bash -i'\"",
     "isShellCommand": true,
     "args": [],
     "showOutput": "always"

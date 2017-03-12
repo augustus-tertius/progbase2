@@ -1,0 +1,1 @@
+/usr/bin/cc  -g   CMakeFiles/lab4.dir/main.c.o CMakeFiles/lab4.dir/src/CUI.c.o CMakeFiles/lab4.dir/src/func.c.o  -o lab4 -rdynamic -lprogbase 

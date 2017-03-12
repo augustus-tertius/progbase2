@@ -1,0 +1,1 @@
+/usr/bin/cc  -g   CMakeFiles/myxml.dir/main.c.o CMakeFiles/myxml.dir/src/designer.c.o CMakeFiles/myxml.dir/src/xmlLoader.c.o  -o myxml -rdynamic -lxml2 

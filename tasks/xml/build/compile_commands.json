@@ -1,0 +1,17 @@
+[
+{
+  "directory": "/home/august/Documents/projects/progbase2/tasks/xml/build",
+  "command": "/usr/bin/cc   -I/home/august/Documents/projects/progbase2/tasks/xml/include -I/usr/include/libxml2  -g   -o CMakeFiles/myxml.dir/main.c.o   -c /home/august/Documents/projects/progbase2/tasks/xml/main.c",
+  "file": "/home/august/Documents/projects/progbase2/tasks/xml/main.c"
+},
+{
+  "directory": "/home/august/Documents/projects/progbase2/tasks/xml/build",
+  "command": "/usr/bin/cc   -I/home/august/Documents/projects/progbase2/tasks/xml/include -I/usr/include/libxml2  -g   -o CMakeFiles/myxml.dir/src/designer.c.o   -c /home/august/Documents/projects/progbase2/tasks/xml/src/designer.c",
+  "file": "/home/august/Documents/projects/progbase2/tasks/xml/src/designer.c"
+},
+{
+  "directory": "/home/august/Documents/projects/progbase2/tasks/xml/build",
+  "command": "/usr/bin/cc   -I/home/august/Documents/projects/progbase2/tasks/xml/include -I/usr/include/libxml2  -g   -o CMakeFiles/myxml.dir/src/xmlLoader.c.o   -c /home/august/Documents/projects/progbase2/tasks/xml/src/xmlLoader.c",
+  "file": "/home/august/Documents/projects/progbase2/tasks/xml/src/xmlLoader.c"
+}
+]

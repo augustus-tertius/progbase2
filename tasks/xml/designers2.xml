@@ -1,0 +1,36 @@
+<designers>
+    <designer>
+        <name>Adalana</name>
+        <age>20</age>
+        <score>5.0</score>
+        <works quan = "2">
+            <work>
+                <workName>Smart house</workName>
+                <year>2010</year>
+            </work>
+            <work>
+                <workName>Statue of Liberty</workName>
+                <year>2018</year>
+            </work>
+        </works>
+    </designer>
+    <designer>
+        <name>Mark</name>
+        <age>44</age>
+        <score>3.2</score>
+        <works quan = "1">
+            <work>
+                <workName>KPI gates</workName>
+                <year>2016</year>
+            </work>
+        </works>
+    </designer> 
+    <designer>
+        <name>Vasya</name>
+        <age>12</age>
+        <score>4.9</score>
+        <works quan = "0">
+        </works>
+    </designer>           
+</designers>
+

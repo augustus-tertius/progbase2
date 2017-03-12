@@ -1,0 +1,17 @@
+<designers>
+    <designer>
+        <name>Adalana</name>
+        <age>20</age>
+        <score>5.0</score>
+        <works quan = "2">
+            <work>
+                <workName>Smart house</workName>
+                <year>2010</year>
+            </work>
+            <work>
+                <workName>Statue of Liberty</workName>
+                <year>2018</year>
+            </work>
+        </works>
+    </designer>
+</designers>  

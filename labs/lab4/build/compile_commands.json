@@ -1,0 +1,17 @@
+[
+{
+  "directory": "/home/august/Documents/projects/progbase2/labs/lab4/build",
+  "command": "/usr/bin/cc   -I/home/august/Documents/projects/progbase2/labs/lab4/include  -g   -o CMakeFiles/lab4.dir/main.c.o   -c /home/august/Documents/projects/progbase2/labs/lab4/main.c",
+  "file": "/home/august/Documents/projects/progbase2/labs/lab4/main.c"
+},
+{
+  "directory": "/home/august/Documents/projects/progbase2/labs/lab4/build",
+  "command": "/usr/bin/cc   -I/home/august/Documents/projects/progbase2/labs/lab4/include  -g   -o CMakeFiles/lab4.dir/src/CUI.c.o   -c /home/august/Documents/projects/progbase2/labs/lab4/src/CUI.c",
+  "file": "/home/august/Documents/projects/progbase2/labs/lab4/src/CUI.c"
+},
+{
+  "directory": "/home/august/Documents/projects/progbase2/labs/lab4/build",
+  "command": "/usr/bin/cc   -I/home/august/Documents/projects/progbase2/labs/lab4/include  -g   -o CMakeFiles/lab4.dir/src/func.c.o   -c /home/august/Documents/projects/progbase2/labs/lab4/src/func.c",
+  "file": "/home/august/Documents/projects/progbase2/labs/lab4/src/func.c"
+}
+]
