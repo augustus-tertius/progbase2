@@ -1,0 +1,17 @@
+[
+{
+  "directory": "/home/august/Documents/projects/progbase2/tasks/json/build",
+  "command": "/usr/bin/cc   -I/home/august/Documents/projects/progbase2/tasks/json/include  -g   -o CMakeFiles/myjson.dir/main.c.o   -c /home/august/Documents/projects/progbase2/tasks/json/main.c",
+  "file": "/home/august/Documents/projects/progbase2/tasks/json/main.c"
+},
+{
+  "directory": "/home/august/Documents/projects/progbase2/tasks/json/build",
+  "command": "/usr/bin/cc   -I/home/august/Documents/projects/progbase2/tasks/json/include  -g   -o CMakeFiles/myjson.dir/src/designer.c.o   -c /home/august/Documents/projects/progbase2/tasks/json/src/designer.c",
+  "file": "/home/august/Documents/projects/progbase2/tasks/json/src/designer.c"
+},
+{
+  "directory": "/home/august/Documents/projects/progbase2/tasks/json/build",
+  "command": "/usr/bin/cc   -I/home/august/Documents/projects/progbase2/tasks/json/include  -g   -o CMakeFiles/myjson.dir/src/JsonLoader.c.o   -c /home/august/Documents/projects/progbase2/tasks/json/src/JsonLoader.c",
+  "file": "/home/august/Documents/projects/progbase2/tasks/json/src/JsonLoader.c"
+}
+]

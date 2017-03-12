@@ -7,3 +7,5 @@ include_directories(include)
 file(GLOB SOURCES "main.c" "src/*.c")
 
 add_executable(myjson ${SOURCES})
+target_link_libraries(myjson libjansson.so)
+

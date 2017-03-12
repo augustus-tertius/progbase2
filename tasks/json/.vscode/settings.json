@@ -5,7 +5,11 @@
         "-Wall",
         "-Werror",
         "-I./include",
-        "-I../include"
+        "-I../include",
+        "-I/usr/include/libjansson-dev"
     ],
-    "clang.executable": "clang"
+    "clang.executable": "clang",
+    "files.associations": {
+        "type_traits": "cpp"
+    }
 }

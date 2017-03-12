@@ -1,0 +1,16 @@
+{
+		"name": "Adalana",
+		"age": 20,
+		"score": 5.0,
+        "quan": 2,
+		"works": [ 
+            {
+                "workName": "Smart house",
+                "year": 2010 
+            },
+			{
+                "workName": "Statue of Liberty",
+                "year": 2018
+            }
+        ]
+}

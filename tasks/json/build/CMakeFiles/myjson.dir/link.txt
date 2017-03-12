@@ -1,0 +1,1 @@
+/usr/bin/cc  -g   CMakeFiles/myjson.dir/main.c.o CMakeFiles/myjson.dir/src/designer.c.o CMakeFiles/myjson.dir/src/JsonLoader.c.o  -o myjson -rdynamic -ljansson 
