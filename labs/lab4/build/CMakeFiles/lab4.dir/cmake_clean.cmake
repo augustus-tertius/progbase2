@@ -1,7 +1,10 @@
 file(REMOVE_RECURSE
   "CMakeFiles/lab4.dir/main.c.o"
   "CMakeFiles/lab4.dir/src/CUI.c.o"
-  "CMakeFiles/lab4.dir/src/func.c.o"
+  "CMakeFiles/lab4.dir/src/list.c.o"
+  "CMakeFiles/lab4.dir/src/lectureCourse.c.o"
+  "CMakeFiles/lab4.dir/src/convert.c.o"
+  "CMakeFiles/lab4.dir/src/storage.c.o"
   "lab4.pdb"
   "lab4"
 )

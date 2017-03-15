@@ -105,45 +105,123 @@ CMakeFiles/lab4.dir/src/CUI.c.o.provides: CMakeFiles/lab4.dir/src/CUI.c.o.requir
 CMakeFiles/lab4.dir/src/CUI.c.o.provides.build: CMakeFiles/lab4.dir/src/CUI.c.o
 
 
-CMakeFiles/lab4.dir/src/func.c.o: CMakeFiles/lab4.dir/flags.make
-CMakeFiles/lab4.dir/src/func.c.o: ../src/func.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/august/Documents/projects/progbase2/labs/lab4/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/lab4.dir/src/func.c.o"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lab4.dir/src/func.c.o   -c /home/august/Documents/projects/progbase2/labs/lab4/src/func.c
+CMakeFiles/lab4.dir/src/list.c.o: CMakeFiles/lab4.dir/flags.make
+CMakeFiles/lab4.dir/src/list.c.o: ../src/list.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/august/Documents/projects/progbase2/labs/lab4/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/lab4.dir/src/list.c.o"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lab4.dir/src/list.c.o   -c /home/august/Documents/projects/progbase2/labs/lab4/src/list.c
 
-CMakeFiles/lab4.dir/src/func.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lab4.dir/src/func.c.i"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/august/Documents/projects/progbase2/labs/lab4/src/func.c > CMakeFiles/lab4.dir/src/func.c.i
+CMakeFiles/lab4.dir/src/list.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lab4.dir/src/list.c.i"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/august/Documents/projects/progbase2/labs/lab4/src/list.c > CMakeFiles/lab4.dir/src/list.c.i
 
-CMakeFiles/lab4.dir/src/func.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lab4.dir/src/func.c.s"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/august/Documents/projects/progbase2/labs/lab4/src/func.c -o CMakeFiles/lab4.dir/src/func.c.s
+CMakeFiles/lab4.dir/src/list.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lab4.dir/src/list.c.s"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/august/Documents/projects/progbase2/labs/lab4/src/list.c -o CMakeFiles/lab4.dir/src/list.c.s
 
-CMakeFiles/lab4.dir/src/func.c.o.requires:
+CMakeFiles/lab4.dir/src/list.c.o.requires:
 
-.PHONY : CMakeFiles/lab4.dir/src/func.c.o.requires
+.PHONY : CMakeFiles/lab4.dir/src/list.c.o.requires
 
-CMakeFiles/lab4.dir/src/func.c.o.provides: CMakeFiles/lab4.dir/src/func.c.o.requires
-	$(MAKE) -f CMakeFiles/lab4.dir/build.make CMakeFiles/lab4.dir/src/func.c.o.provides.build
-.PHONY : CMakeFiles/lab4.dir/src/func.c.o.provides
+CMakeFiles/lab4.dir/src/list.c.o.provides: CMakeFiles/lab4.dir/src/list.c.o.requires
+	$(MAKE) -f CMakeFiles/lab4.dir/build.make CMakeFiles/lab4.dir/src/list.c.o.provides.build
+.PHONY : CMakeFiles/lab4.dir/src/list.c.o.provides
 
-CMakeFiles/lab4.dir/src/func.c.o.provides.build: CMakeFiles/lab4.dir/src/func.c.o
+CMakeFiles/lab4.dir/src/list.c.o.provides.build: CMakeFiles/lab4.dir/src/list.c.o
+
+
+CMakeFiles/lab4.dir/src/lectureCourse.c.o: CMakeFiles/lab4.dir/flags.make
+CMakeFiles/lab4.dir/src/lectureCourse.c.o: ../src/lectureCourse.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/august/Documents/projects/progbase2/labs/lab4/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object CMakeFiles/lab4.dir/src/lectureCourse.c.o"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lab4.dir/src/lectureCourse.c.o   -c /home/august/Documents/projects/progbase2/labs/lab4/src/lectureCourse.c
+
+CMakeFiles/lab4.dir/src/lectureCourse.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lab4.dir/src/lectureCourse.c.i"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/august/Documents/projects/progbase2/labs/lab4/src/lectureCourse.c > CMakeFiles/lab4.dir/src/lectureCourse.c.i
+
+CMakeFiles/lab4.dir/src/lectureCourse.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lab4.dir/src/lectureCourse.c.s"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/august/Documents/projects/progbase2/labs/lab4/src/lectureCourse.c -o CMakeFiles/lab4.dir/src/lectureCourse.c.s
+
+CMakeFiles/lab4.dir/src/lectureCourse.c.o.requires:
+
+.PHONY : CMakeFiles/lab4.dir/src/lectureCourse.c.o.requires
+
+CMakeFiles/lab4.dir/src/lectureCourse.c.o.provides: CMakeFiles/lab4.dir/src/lectureCourse.c.o.requires
+	$(MAKE) -f CMakeFiles/lab4.dir/build.make CMakeFiles/lab4.dir/src/lectureCourse.c.o.provides.build
+.PHONY : CMakeFiles/lab4.dir/src/lectureCourse.c.o.provides
+
+CMakeFiles/lab4.dir/src/lectureCourse.c.o.provides.build: CMakeFiles/lab4.dir/src/lectureCourse.c.o
+
+
+CMakeFiles/lab4.dir/src/convert.c.o: CMakeFiles/lab4.dir/flags.make
+CMakeFiles/lab4.dir/src/convert.c.o: ../src/convert.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/august/Documents/projects/progbase2/labs/lab4/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building C object CMakeFiles/lab4.dir/src/convert.c.o"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lab4.dir/src/convert.c.o   -c /home/august/Documents/projects/progbase2/labs/lab4/src/convert.c
+
+CMakeFiles/lab4.dir/src/convert.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lab4.dir/src/convert.c.i"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/august/Documents/projects/progbase2/labs/lab4/src/convert.c > CMakeFiles/lab4.dir/src/convert.c.i
+
+CMakeFiles/lab4.dir/src/convert.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lab4.dir/src/convert.c.s"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/august/Documents/projects/progbase2/labs/lab4/src/convert.c -o CMakeFiles/lab4.dir/src/convert.c.s
+
+CMakeFiles/lab4.dir/src/convert.c.o.requires:
+
+.PHONY : CMakeFiles/lab4.dir/src/convert.c.o.requires
+
+CMakeFiles/lab4.dir/src/convert.c.o.provides: CMakeFiles/lab4.dir/src/convert.c.o.requires
+	$(MAKE) -f CMakeFiles/lab4.dir/build.make CMakeFiles/lab4.dir/src/convert.c.o.provides.build
+.PHONY : CMakeFiles/lab4.dir/src/convert.c.o.provides
+
+CMakeFiles/lab4.dir/src/convert.c.o.provides.build: CMakeFiles/lab4.dir/src/convert.c.o
+
+
+CMakeFiles/lab4.dir/src/storage.c.o: CMakeFiles/lab4.dir/flags.make
+CMakeFiles/lab4.dir/src/storage.c.o: ../src/storage.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/august/Documents/projects/progbase2/labs/lab4/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building C object CMakeFiles/lab4.dir/src/storage.c.o"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/lab4.dir/src/storage.c.o   -c /home/august/Documents/projects/progbase2/labs/lab4/src/storage.c
+
+CMakeFiles/lab4.dir/src/storage.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/lab4.dir/src/storage.c.i"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/august/Documents/projects/progbase2/labs/lab4/src/storage.c > CMakeFiles/lab4.dir/src/storage.c.i
+
+CMakeFiles/lab4.dir/src/storage.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/lab4.dir/src/storage.c.s"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/august/Documents/projects/progbase2/labs/lab4/src/storage.c -o CMakeFiles/lab4.dir/src/storage.c.s
+
+CMakeFiles/lab4.dir/src/storage.c.o.requires:
+
+.PHONY : CMakeFiles/lab4.dir/src/storage.c.o.requires
+
+CMakeFiles/lab4.dir/src/storage.c.o.provides: CMakeFiles/lab4.dir/src/storage.c.o.requires
+	$(MAKE) -f CMakeFiles/lab4.dir/build.make CMakeFiles/lab4.dir/src/storage.c.o.provides.build
+.PHONY : CMakeFiles/lab4.dir/src/storage.c.o.provides
+
+CMakeFiles/lab4.dir/src/storage.c.o.provides.build: CMakeFiles/lab4.dir/src/storage.c.o
 
 
 # Object files for target lab4
 lab4_OBJECTS = \
 "CMakeFiles/lab4.dir/main.c.o" \
 "CMakeFiles/lab4.dir/src/CUI.c.o" \
-"CMakeFiles/lab4.dir/src/func.c.o"
+"CMakeFiles/lab4.dir/src/list.c.o" \
+"CMakeFiles/lab4.dir/src/lectureCourse.c.o" \
+"CMakeFiles/lab4.dir/src/convert.c.o" \
+"CMakeFiles/lab4.dir/src/storage.c.o"
 
 # External object files for target lab4
 lab4_EXTERNAL_OBJECTS =
 
 lab4: CMakeFiles/lab4.dir/main.c.o
 lab4: CMakeFiles/lab4.dir/src/CUI.c.o
-lab4: CMakeFiles/lab4.dir/src/func.c.o
+lab4: CMakeFiles/lab4.dir/src/list.c.o
+lab4: CMakeFiles/lab4.dir/src/lectureCourse.c.o
+lab4: CMakeFiles/lab4.dir/src/convert.c.o
+lab4: CMakeFiles/lab4.dir/src/storage.c.o
 lab4: CMakeFiles/lab4.dir/build.make
 lab4: CMakeFiles/lab4.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/august/Documents/projects/progbase2/labs/lab4/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C executable lab4"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/august/Documents/projects/progbase2/labs/lab4/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking C executable lab4"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/lab4.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -153,7 +231,10 @@ CMakeFiles/lab4.dir/build: lab4
 
 CMakeFiles/lab4.dir/requires: CMakeFiles/lab4.dir/main.c.o.requires
 CMakeFiles/lab4.dir/requires: CMakeFiles/lab4.dir/src/CUI.c.o.requires
-CMakeFiles/lab4.dir/requires: CMakeFiles/lab4.dir/src/func.c.o.requires
+CMakeFiles/lab4.dir/requires: CMakeFiles/lab4.dir/src/list.c.o.requires
+CMakeFiles/lab4.dir/requires: CMakeFiles/lab4.dir/src/lectureCourse.c.o.requires
+CMakeFiles/lab4.dir/requires: CMakeFiles/lab4.dir/src/convert.c.o.requires
+CMakeFiles/lab4.dir/requires: CMakeFiles/lab4.dir/src/storage.c.o.requires
 
 .PHONY : CMakeFiles/lab4.dir/requires
 

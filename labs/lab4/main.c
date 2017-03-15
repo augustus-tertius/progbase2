@@ -1,4 +1,10 @@
-#include <lab_3.h>
+#include <progbase.h>
+#include <pbconsole.h>
+#include <ctype.h>
+#include <stdlib.h>
+#include <time.h>
+#include <string.h>
+
 #include <CUI.h>
 
 int main(void){
@@ -6,27 +12,27 @@ int main(void){
 
     struct menuBox box = {4, 32, 4, 70, 7, 20};
     int exit = 1;
-    struct lectureCourse* pArr = NULL;
     int quan = 0;
 
     drawBox(box);
-    pArr = startMenu(box, &quan);
+    void* list = startMenu(box, &quan);
     printMainMenu(box);
 
     while(exit) {
       char ch;
       ch = conGetChar();
-      printf("%c", ch);
+      //printf("%c", ch);
 
-      int check = checkSrt(box, pArr);
+      int check = checkSrt(box, list);
       if(check){
         conEmptyStr(box);
+        freeAll(list);
         exit = printGB(box);
       }
 
       if(isalpha(ch)){
         if('q' == ch){
-          free(pArr);
+          freeAll(list);
           exit = printGB(box);
           break;
         }
@@ -38,24 +44,25 @@ int main(void){
           pEnterOperationCode(box);
         }
         if('s' == ch){
-          int status = conSaveToFile(box, pArr, quan);
-          if(status){
-            printMainMenu(box);
-            conMove(box.bottom,  box.left);
-            printf("\t Зміни успішно збережені ");
-          } else {
-            conMove(box.bottom,  box.left);
-            printf("\t На жаль, при збереженні файлу виникла помилка ");
-          }
-          pEnterOperationCode(box);
+          int status = conSaveToFile(box, list, quan);
+            if(status){
+              printMainMenu(box);
+              conMove(box.bottom,  box.left);
+              printf("\t Зміни успішно збережені ");
+            } else {
+              conMove(box.bottom,  box.left);
+              printf("\t На жаль, при збереженні файлу виникла помилка ");
+            }
+            pEnterOperationCode(box);
         }
       } else if(isdigit(ch)){
           if('1' == ch) {
-            pArr = conDeleteStruct(box, pArr, &quan);
+            quan = conDeleteStruct(box, list, quan);
             printMainMenu(box);
-            int check = checkSrt(box, pArr);
+            int check = checkSrt(box, list);
             if(check){
               conEmptyStr(box);
+              freeAll(list);
               exit = printGB(box);
             } else {
               pEnterOperationCode(box);
@@ -63,28 +70,28 @@ int main(void){
           }
           if('2' == ch) {
             drawParametrsList(box);
-            conRefillStruct(box, pArr, quan);
+            conRefillStruct(box, list, quan);
             drawDownBox(box);
             pEnterOperationCode(box);
           }
           if('3' == ch){
             drawParametrsList(box);
-            conRefillParam(box, pArr, quan);
+            conRefillParam(box, list, quan);
             drawDownBox(box);
             pEnterOperationCode(box);
           }
           if('4' == ch){
-            conSearchStr(box, pArr, quan);
+            conSearchStr(box, list, quan);
             pEnterOperationCode(box);
           }
           if('5' == ch){
-            conStructToStr(box, pArr, quan);
+            conStructToStr(box, list, quan);
             pEnterOperationCode(box);
           }
         } else {
           drawBox(box);
           printMainMenu(box);
-          conMove(box.bottom,  box.left);
+          conMove(box.bottom, box.left);
           printf("\t Неправильно введений номер операції");
           pEnterOperationCode(box);
         }

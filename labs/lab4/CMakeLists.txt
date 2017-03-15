@@ -9,3 +9,4 @@ file(GLOB SOURCES "main.c" "src/*.c")
 add_executable(lab4 ${SOURCES})
 
 target_link_libraries(lab4 progbase)
+

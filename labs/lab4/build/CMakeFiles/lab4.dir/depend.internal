@@ -3,14 +3,29 @@
 
 CMakeFiles/lab4.dir/main.c.o
  ../include/CUI.h
- ../include/lab_3.h
+ ../include/lectureCourse.h
+ ../include/list.h
  /home/august/Documents/projects/progbase2/labs/lab4/main.c
 CMakeFiles/lab4.dir/src/CUI.c.o
  ../include/CUI.h
- ../include/func.h
- ../include/lab_3.h
+ ../include/convert.h
+ ../include/lectureCourse.h
+ ../include/list.h
+ ../include/storage.h
  /home/august/Documents/projects/progbase2/labs/lab4/src/CUI.c
-CMakeFiles/lab4.dir/src/func.c.o
- ../include/func.h
- ../include/lab_3.h
- /home/august/Documents/projects/progbase2/labs/lab4/src/func.c
+CMakeFiles/lab4.dir/src/convert.c.o
+ ../include/convert.h
+ ../include/lectureCourse.h
+ ../include/list.h
+ /home/august/Documents/projects/progbase2/labs/lab4/src/convert.c
+CMakeFiles/lab4.dir/src/lectureCourse.c.o
+ ../include/lectureCourse.h
+ /home/august/Documents/projects/progbase2/labs/lab4/src/lectureCourse.c
+CMakeFiles/lab4.dir/src/list.c.o
+ ../include/list.h
+ /home/august/Documents/projects/progbase2/labs/lab4/src/list.c
+CMakeFiles/lab4.dir/src/storage.c.o
+ ../include/lectureCourse.h
+ ../include/list.h
+ ../include/storage.h
+ /home/august/Documents/projects/progbase2/labs/lab4/src/storage.c

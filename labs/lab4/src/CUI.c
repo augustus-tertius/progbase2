@@ -1,6 +1,12 @@
-#include <lab_3.h>
+#include <stdio.h>
+#include <ctype.h>
+#include <progbase.h>
+#include <pbconsole.h>
+#include <string.h>
+
 #include <CUI.h>
-#include <func.h>
+#include <convert.h>
+#include <storage.h>
 
 void drawBg (void) {
   int x;
@@ -87,7 +93,7 @@ void printMainMenu(struct menuBox box) {
   conSetAttr(BG_WHITE);
   conSetAttr(FG_BLACK);
   conMove(box.head + 1, box.left + 3);
-  printf("\t 1. Видалити дані із вказаної позиції у масиві \n\t \
+  printf("\t 1. Видалити дані із вказаної позиції у списку \n\t \
 2. Перезаписати дані у вказаній позиції на нововведені \n\t 3. Перезаписати\
  тільки обране поле даних елемента на \n\t вказаній позиції \n\t 4. Знайти всі\
  курси лекцій, у яких загальна тривалість  \n\t більша Х годин \n\t 5.\
@@ -130,9 +136,11 @@ int printGB(struct menuBox box){
   return 0;
 }
 
-struct lectureCourse* startMenu(struct menuBox box, int* quan){
+List* startMenu(struct menuBox box, int* quan){
+
+  List* list = NULL;
+
   int exit = 1;
-  struct lectureCourse* pArr = NULL;
   drawStartMenu(box);
 
   while(exit) {
@@ -145,19 +153,24 @@ struct lectureCourse* startMenu(struct menuBox box, int* quan){
           int flag = 1;
           while(flag){
             conMove(box.bottom -2,  box.left);
-            printf(" Введіть кількість масивів, які ви бажаєте створити: ");
+            printf(" Введіть кількість елементів, які ви бажаєте створити: ");
             *quan = getInt();
             if(flag > 0){
               flag = 0;
             } else {
               conMove(box.bottom,  box.left);
-              printf("\t Введена кількість масивів є невірною. Спробуйте ще раз.");
+              printf("\t Введена кількість елементів є невірною. Спробуйте ще раз.");
             }
           }
 
-          pArr = makePArr(*quan);
-          drawDownBox(box);
-          conFillArr(pArr, *quan, box);
+          list = List_new();
+
+          for(int i = 0; i < *quan; i++){
+            LectureCourse* lC = LectureCourse_new();
+            List_add(list, lC);
+            drawDownBox(box);
+            conFillEl(list, i, box);
+          }
           exit = 0;
         }
         if('2' == ch) {
@@ -167,13 +180,13 @@ struct lectureCourse* startMenu(struct menuBox box, int* quan){
           drawFileInstructions(box);
           while(flag){
             conMove(box.bottom -2,  box.left);
-            printf(" Введіть кількість масивів, яка має бути зчитана з файлу: ");
+            printf(" Введіть кількість елементів, яка має бути зчитана з файлу: ");
             *quan = getInt();
             if(flag > 0){
               flag = 0;
             } else {
               conMove(box.bottom,  box.left);
-              printf("\t Введена кількість масивів є невірною. Спробуйте ще раз.");
+              printf("\t Введена кількість елементів є невірною. Спробуйте ще раз.");
             }
           }
 
@@ -181,9 +194,8 @@ struct lectureCourse* startMenu(struct menuBox box, int* quan){
           printf(" Введіть назву файлу, з якого будуть считані дані: ");
           scanf("%s", FileName);
 
-          pArr = makePArr(*quan);
-          int status = readFromFile(pArr, *quan, FileName);
-          if(status) {
+          list = readFromFile(*quan, FileName);
+          if(list == NULL) {
             conMove(box.bottom,  box.left);
             printf("\t При зчитуванні даних виникла помилка");
           }
@@ -201,7 +213,7 @@ struct lectureCourse* startMenu(struct menuBox box, int* quan){
           pEnterOperationCode(box);
       }
     }
-    return pArr;
+    return list;
 }
 
 void drawStartMenu(struct menuBox box){
@@ -210,11 +222,11 @@ void drawStartMenu(struct menuBox box){
   drawDownBox(box);
 
   conMove(box.down + shift,  box.left);
-  printf("\t Перш ніж почати працювати з масивом, його потрібно створити");
+  printf("\t Перш ніж почати працювати зі списком, його потрібно створити");
   shift += 2;
 
   conMove(box.down + shift,  box.left);
-  printf("\t 1. Ввести масив даних з консолі \n\t 2. Зчитати масив з файлу");
+  printf("\t 1. Ввести список даних з консолі \n\t 2. Зчитати список з файлу");
 
   pEnterOperationCode(box);
 }
@@ -261,74 +273,70 @@ void drawFileInstructions (struct menuBox box) {
     conSetAttr(BG_CYAN);
 }
 
-void conFillArr(struct lectureCourse* pArr, int quan, struct menuBox box){
-  struct lectureCourse* lC = NULL;
-  char str [300];
+void conFillEl(List* list, int index, struct menuBox box){
+    char str [300];
 
-
-  for(int i = 0; i < quan; i++){
     // сделать проверку корректности ввода пользователя !
+
     drawDownBox(box);
     int shift = 1;
-    int number = i + 1;
     conMove(box.down + shift,  box.left);
-    printf("\tLecture course №%i", number);
+    printf("\tLecture course №%i", index + 1);
     shift += 2;
 
-    lC = &pArr[i];
+    void* lC = List_get(list, index);
 
     conMove(box.down + shift,  box.left);
     printf("\t Введіть назву курсу: ");
     fgets(str, 300, stdin);
     str[strlen(str) - 1] = '\0';
-    refillParam(lC, 1, str);
+    LectureCourse_setCourseName(lC, str);
     shift++;
 
     conMove(box.down + shift,  box.left);
     printf("\t Введіть  прізвище викладача: ");
     fgets(str, 300, stdin);
     str[strlen(str) - 1] = '\0';
-    refillParam(lC, 2, str);
+    LectureCourse_setLectSurname(lC, str);
     shift++;
 
     conMove(box.down + shift,  box.left);
     printf("\t Введіть ім'я викладача: ");
     fgets(str, 300, stdin);
     str[strlen(str) - 1] = '\0';
-    refillParam(lC, 3, str);
+    LectureCourse_setLectName(lC, str);
     shift++;
 
     conMove(box.down + shift,  box.left);
     printf("\t Введіть по-батькові викладача: ");
     fgets(str, 300, stdin);
     str[strlen(str) - 1] = '\0';
-    refillParam(lC, 4, str);
+    LectureCourse_setLectMiddlen(lC, str);
     shift++;
 
     conMove(box.down + shift,  box.left);
     printf("\t Введіть вік викладача: ");
     fgets(str, 300, stdin);
     str[strlen(str) - 1] = '\0';
-    refillParam(lC, 5, str);
+    LectureCourse_setLectAge(lC, atoi(str));
     shift++;
 
     conMove(box.down + shift,  box.left);
     printf("\t Введіть довжину курсу: ");
     fgets(str, 300, stdin);
     str[strlen(str) - 1] = '\0';
-    refillParam(lC, 6, str);
+    LectureCourse_setLength(lC, atoi(str));
     shift++;
 
     conMove(box.down + shift,  box.left);
     printf("\t Введіть оцінку курсу: ");
     fgets(str, 300, stdin);
     str[strlen(str) - 1] = '\0';
-    refillParam(lC, 7, str);
+    LectureCourse_setRating(lC, atof(str));
     shift++;
-  }
 }
 
-int conSaveToFile(struct menuBox box, struct lectureCourse* pArr, int quan){
+int conSaveToFile(struct menuBox box, List* list, int quan){
   char FileName [50];
   int status = 0;
 
@@ -338,34 +346,37 @@ int conSaveToFile(struct menuBox box, struct lectureCourse* pArr, int quan){
   printf("\t Введіть назву файлу, у якому збережуться дані: ");
   scanf("%s", FileName);
 
-  status = saveToFile(pArr, quan, FileName);
+  status = saveToFile(list, FileName);
 
   return status;
 }
 
-struct lectureCourse* conDeleteStruct(struct menuBox box, struct lectureCourse* pArr, int* quan){
-  int delnum = 0;
-  int flag = 1;
+int conDeleteStruct(struct menuBox box, List* list, int quan){
+    int delnum = 0;
+    int flag = 1;
 
-  while(flag){
-    conMove(box.bottom - 1,  box.left);
-    printf("\t Введіть номер структури, що буде видалена: ");
-    scanf("%i", &delnum);
+    while(flag){
+      conMove(box.bottom - 1,  box.left);
+      printf("\t Введіть номер структури, що буде видалена: ");
+      scanf("%i", &delnum);
 
-    if(delnum > 0 && delnum <= *quan){
-      flag = 0;
-    } else {
-      conMove(box.bottom,  box.left);
-      printf("\t Структури з таким порядковим номером не існує ");
+      if(delnum > 0 && delnum <= quan){
+        flag = 0;
+      } else {
+        conMove(box.bottom,  box.left);
+        printf("\t Структури з таким порядковим номером не існує ");
+      }
     }
-  }
 
-  pArr = deleteStruct(pArr, quan, delnum);
-  return pArr;
+    LectureCourse* lC = List_get(list, delnum -1);
+    LectureCourse_free(&lC);
+    List_removeAt(list, delnum - 1);
+
+    return List_getSize(list);
 }
 
- int checkSrt(struct menuBox box, struct lectureCourse* pArr){
-  if(pArr == NULL){
+ int checkSrt(struct menuBox box, List* list){
+  if(List_isEmpty(list)){
     conMove(box.bottom - 1,  box.left);
     printf(" \tНа жаль, масив структур тепер не містить жодного елемента");
     conHideCursor();
@@ -375,7 +386,8 @@ struct lectureCourse* conDeleteStruct(struct menuBox box, struct lectureCourse* 
   }
 }
 
-void conEmptyStr(struct menuBox box) {
+
+void conEmptyStr(struct menuBox box){
   int flag = 1;
 
   while(flag){
@@ -386,9 +398,9 @@ void conEmptyStr(struct menuBox box) {
     }
       } else {
         conMove(box.bottom - 1,  box.left);
-        printf("\t На жаль, масив структур тепер не містить жодного елемента");
+        printf("\t На жаль, список структур тепер не містить жодного елемента");
         conMove(box.bottom,  box.left);
-        printf("\t Операції над масивом є неможливими");
+        printf("\t Операції над списком є неможливими");
         conHideCursor();
     }
   }
@@ -423,7 +435,7 @@ void drawParametrsList(struct menuBox box){
   printf("7. Оцінка курсу(дробове число)");
 }
 
-void conRefillParam(struct menuBox box, struct lectureCourse* pArr, int quan){
+void conRefillParam(struct menuBox box, List* list, int quan){
   int line = 0;
   int strNum = 0;
   char str [300];
@@ -463,15 +475,15 @@ void conRefillParam(struct menuBox box, struct lectureCourse* pArr, int quan){
   fgets(str, 300, stdin);
   str[strlen(str) - 1] = '\0';
 
-  refillParam( &(pArr[strNum - 1]), line, str );
+  refillParam(List_get(list, strNum - 1), line, str);
 }
 
-void conRefillStruct(struct menuBox box, struct lectureCourse* pArr, int quan){
+void conRefillStruct(struct menuBox box, List* list, int quan){
   int strNum = 0;
   int flag = 1;
+  drawDownBox(box);
 
   while(flag){
-    drawDownBox(box);
     conMove(box.bottom - 1,  box.left);
     printf("\t Оберіть номер структури, параметри якої бажаєте змінити: ");
     strNum = getInt();
@@ -480,18 +492,19 @@ void conRefillStruct(struct menuBox box, struct lectureCourse* pArr, int quan){
     } else {
       conMove(box.bottom,  box.left);
       printf("\t Структури з таким порядковим номером не існує ");
+      drawDownBox(box);
     }
   }
 
   conMove(box.down + 1,  box.left);
   printf("\t Введіть нові параметри для структури ");
-  conFillArr(&(pArr[strNum - 1]), 1, box);
+  conFillEl(list, strNum - 1, box);
 }
 
-void conSearchStr(struct menuBox box, struct lectureCourse* pArr, int quan){
+void conSearchStr(struct menuBox box, List* list, int quan){
   int x = 0;
   int resultsc = 0;
-  struct lectureCourse* res [quan];
+  LectureCourse* res [quan];
   int shift = 2;
   char str [20];
   drawDownBox(box);
@@ -501,7 +514,7 @@ void conSearchStr(struct menuBox box, struct lectureCourse* pArr, int quan){
   x = atoi(str);
   drawDownBox(box);
 
-  resultsc = searchStr(pArr, quan, x,res);
+  resultsc = searchStr(list, quan, x, res);
   conMove(box.bottom,  box.left);
   if(resultsc == 0){
     conMove(box.down + 1,  box.left);
@@ -511,7 +524,7 @@ void conSearchStr(struct menuBox box, struct lectureCourse* pArr, int quan){
     printf("\t Курси, що мають загальну тривалість більше за %i:", x);
     for(int i = 0; i < resultsc; i++){
       conMove(box.down + shift,  box.left);
-      printf("\t %s", (res[i])->courseName);
+      printf("\t %s", (LectureCourse_getCourseName(res[i])));
       fflush(stdout);
 
       shift ++;
@@ -519,13 +532,13 @@ void conSearchStr(struct menuBox box, struct lectureCourse* pArr, int quan){
   }
 }
 
-void conStructToStr(struct menuBox box, struct lectureCourse* pArr, int quan){
+void conStructToStr(struct menuBox box, List* head, int quan){
   int strNum = 0;
   int flag = 1;
   char str [1000] = "";
 
+  drawDownBox(box);
   while(flag){
-    drawDownBox(box);
     conMove(box.bottom - 1,  box.left);
     printf("\t Оберіть номер структури, яку бажаєте вивести як строку: ");
     strNum = getInt();
@@ -533,15 +546,30 @@ void conStructToStr(struct menuBox box, struct lectureCourse* pArr, int quan){
       flag = 0;
     } else {
       conMove(box.bottom,  box.left);
+      drawDownBox(box);
       printf("\t Структури з таким порядковим номером не існує ");
     }
   }
 
-  (void) structToStr(&pArr[strNum - 1], str);
+  void* LC = List_get(head, strNum - 1);
+
+  (void) structToStr(LC, str);
 
   drawDownBox(box);
   conMove(box.down + 1,  box.left + 1);
   conSetAttr(BG_BLACK);
   printf("%s", str);
+  
   conSetAttr(BG_CYAN);
+}
+
+void freeAll(List* head){
+  for(int i = List_getSize(head) - 1; i >= 0; i--){
+    void* LC = List_get(head, i);
+    if(NULL != LC){
+      free(LC); 
+    }
+  }
+
+  List_free(&head);
 }

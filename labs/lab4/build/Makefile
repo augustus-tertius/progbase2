@@ -177,32 +177,113 @@ src/CUI.c.s:
 	$(MAKE) -f CMakeFiles/lab4.dir/build.make CMakeFiles/lab4.dir/src/CUI.c.s
 .PHONY : src/CUI.c.s
 
-src/func.o: src/func.c.o
+src/convert.o: src/convert.c.o
 
-.PHONY : src/func.o
+.PHONY : src/convert.o
 
 # target to build an object file
-src/func.c.o:
-	$(MAKE) -f CMakeFiles/lab4.dir/build.make CMakeFiles/lab4.dir/src/func.c.o
-.PHONY : src/func.c.o
+src/convert.c.o:
+	$(MAKE) -f CMakeFiles/lab4.dir/build.make CMakeFiles/lab4.dir/src/convert.c.o
+.PHONY : src/convert.c.o
 
-src/func.i: src/func.c.i
+src/convert.i: src/convert.c.i
 
-.PHONY : src/func.i
+.PHONY : src/convert.i
 
 # target to preprocess a source file
-src/func.c.i:
-	$(MAKE) -f CMakeFiles/lab4.dir/build.make CMakeFiles/lab4.dir/src/func.c.i
-.PHONY : src/func.c.i
+src/convert.c.i:
+	$(MAKE) -f CMakeFiles/lab4.dir/build.make CMakeFiles/lab4.dir/src/convert.c.i
+.PHONY : src/convert.c.i
 
-src/func.s: src/func.c.s
+src/convert.s: src/convert.c.s
 
-.PHONY : src/func.s
+.PHONY : src/convert.s
 
 # target to generate assembly for a file
-src/func.c.s:
-	$(MAKE) -f CMakeFiles/lab4.dir/build.make CMakeFiles/lab4.dir/src/func.c.s
-.PHONY : src/func.c.s
+src/convert.c.s:
+	$(MAKE) -f CMakeFiles/lab4.dir/build.make CMakeFiles/lab4.dir/src/convert.c.s
+.PHONY : src/convert.c.s
+
+src/lectureCourse.o: src/lectureCourse.c.o
+
+.PHONY : src/lectureCourse.o
+
+# target to build an object file
+src/lectureCourse.c.o:
+	$(MAKE) -f CMakeFiles/lab4.dir/build.make CMakeFiles/lab4.dir/src/lectureCourse.c.o
+.PHONY : src/lectureCourse.c.o
+
+src/lectureCourse.i: src/lectureCourse.c.i
+
+.PHONY : src/lectureCourse.i
+
+# target to preprocess a source file
+src/lectureCourse.c.i:
+	$(MAKE) -f CMakeFiles/lab4.dir/build.make CMakeFiles/lab4.dir/src/lectureCourse.c.i
+.PHONY : src/lectureCourse.c.i
+
+src/lectureCourse.s: src/lectureCourse.c.s
+
+.PHONY : src/lectureCourse.s
+
+# target to generate assembly for a file
+src/lectureCourse.c.s:
+	$(MAKE) -f CMakeFiles/lab4.dir/build.make CMakeFiles/lab4.dir/src/lectureCourse.c.s
+.PHONY : src/lectureCourse.c.s
+
+src/list.o: src/list.c.o
+
+.PHONY : src/list.o
+
+# target to build an object file
+src/list.c.o:
+	$(MAKE) -f CMakeFiles/lab4.dir/build.make CMakeFiles/lab4.dir/src/list.c.o
+.PHONY : src/list.c.o
+
+src/list.i: src/list.c.i
+
+.PHONY : src/list.i
+
+# target to preprocess a source file
+src/list.c.i:
+	$(MAKE) -f CMakeFiles/lab4.dir/build.make CMakeFiles/lab4.dir/src/list.c.i
+.PHONY : src/list.c.i
+
+src/list.s: src/list.c.s
+
+.PHONY : src/list.s
+
+# target to generate assembly for a file
+src/list.c.s:
+	$(MAKE) -f CMakeFiles/lab4.dir/build.make CMakeFiles/lab4.dir/src/list.c.s
+.PHONY : src/list.c.s
+
+src/storage.o: src/storage.c.o
+
+.PHONY : src/storage.o
+
+# target to build an object file
+src/storage.c.o:
+	$(MAKE) -f CMakeFiles/lab4.dir/build.make CMakeFiles/lab4.dir/src/storage.c.o
+.PHONY : src/storage.c.o
+
+src/storage.i: src/storage.c.i
+
+.PHONY : src/storage.i
+
+# target to preprocess a source file
+src/storage.c.i:
+	$(MAKE) -f CMakeFiles/lab4.dir/build.make CMakeFiles/lab4.dir/src/storage.c.i
+.PHONY : src/storage.c.i
+
+src/storage.s: src/storage.c.s
+
+.PHONY : src/storage.s
+
+# target to generate assembly for a file
+src/storage.c.s:
+	$(MAKE) -f CMakeFiles/lab4.dir/build.make CMakeFiles/lab4.dir/src/storage.c.s
+.PHONY : src/storage.c.s
 
 # Help Target
 help:
@@ -219,9 +300,18 @@ help:
 	@echo "... src/CUI.o"
 	@echo "... src/CUI.i"
 	@echo "... src/CUI.s"
-	@echo "... src/func.o"
-	@echo "... src/func.i"
-	@echo "... src/func.s"
+	@echo "... src/convert.o"
+	@echo "... src/convert.i"
+	@echo "... src/convert.s"
+	@echo "... src/lectureCourse.o"
+	@echo "... src/lectureCourse.i"
+	@echo "... src/lectureCourse.s"
+	@echo "... src/list.o"
+	@echo "... src/list.i"
+	@echo "... src/list.s"
+	@echo "... src/storage.o"
+	@echo "... src/storage.i"
+	@echo "... src/storage.s"
 .PHONY : help
 
 
