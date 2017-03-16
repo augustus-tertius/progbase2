@@ -111,6 +111,19 @@ depend:
 .PHONY : depend
 
 #=============================================================================
+# Target rules for targets named lab4test
+
+# Build rule for target.
+lab4test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 lab4test
+.PHONY : lab4test
+
+# fast build rule for target.
+lab4test/fast:
+	$(MAKE) -f CMakeFiles/lab4test.dir/build.make CMakeFiles/lab4test.dir/build
+.PHONY : lab4test/fast
+
+#=============================================================================
 # Target rules for targets named lab4
 
 # Build rule for target.
@@ -156,6 +169,7 @@ src/CUI.o: src/CUI.c.o
 
 # target to build an object file
 src/CUI.c.o:
+	$(MAKE) -f CMakeFiles/lab4test.dir/build.make CMakeFiles/lab4test.dir/src/CUI.c.o
 	$(MAKE) -f CMakeFiles/lab4.dir/build.make CMakeFiles/lab4.dir/src/CUI.c.o
 .PHONY : src/CUI.c.o
 
@@ -165,6 +179,7 @@ src/CUI.i: src/CUI.c.i
 
 # target to preprocess a source file
 src/CUI.c.i:
+	$(MAKE) -f CMakeFiles/lab4test.dir/build.make CMakeFiles/lab4test.dir/src/CUI.c.i
 	$(MAKE) -f CMakeFiles/lab4.dir/build.make CMakeFiles/lab4.dir/src/CUI.c.i
 .PHONY : src/CUI.c.i
 
@@ -174,6 +189,7 @@ src/CUI.s: src/CUI.c.s
 
 # target to generate assembly for a file
 src/CUI.c.s:
+	$(MAKE) -f CMakeFiles/lab4test.dir/build.make CMakeFiles/lab4test.dir/src/CUI.c.s
 	$(MAKE) -f CMakeFiles/lab4.dir/build.make CMakeFiles/lab4.dir/src/CUI.c.s
 .PHONY : src/CUI.c.s
 
@@ -183,6 +199,7 @@ src/convert.o: src/convert.c.o
 
 # target to build an object file
 src/convert.c.o:
+	$(MAKE) -f CMakeFiles/lab4test.dir/build.make CMakeFiles/lab4test.dir/src/convert.c.o
 	$(MAKE) -f CMakeFiles/lab4.dir/build.make CMakeFiles/lab4.dir/src/convert.c.o
 .PHONY : src/convert.c.o
 
@@ -192,6 +209,7 @@ src/convert.i: src/convert.c.i
 
 # target to preprocess a source file
 src/convert.c.i:
+	$(MAKE) -f CMakeFiles/lab4test.dir/build.make CMakeFiles/lab4test.dir/src/convert.c.i
 	$(MAKE) -f CMakeFiles/lab4.dir/build.make CMakeFiles/lab4.dir/src/convert.c.i
 .PHONY : src/convert.c.i
 
@@ -201,6 +219,7 @@ src/convert.s: src/convert.c.s
 
 # target to generate assembly for a file
 src/convert.c.s:
+	$(MAKE) -f CMakeFiles/lab4test.dir/build.make CMakeFiles/lab4test.dir/src/convert.c.s
 	$(MAKE) -f CMakeFiles/lab4.dir/build.make CMakeFiles/lab4.dir/src/convert.c.s
 .PHONY : src/convert.c.s
 
@@ -210,6 +229,7 @@ src/lectureCourse.o: src/lectureCourse.c.o
 
 # target to build an object file
 src/lectureCourse.c.o:
+	$(MAKE) -f CMakeFiles/lab4test.dir/build.make CMakeFiles/lab4test.dir/src/lectureCourse.c.o
 	$(MAKE) -f CMakeFiles/lab4.dir/build.make CMakeFiles/lab4.dir/src/lectureCourse.c.o
 .PHONY : src/lectureCourse.c.o
 
@@ -219,6 +239,7 @@ src/lectureCourse.i: src/lectureCourse.c.i
 
 # target to preprocess a source file
 src/lectureCourse.c.i:
+	$(MAKE) -f CMakeFiles/lab4test.dir/build.make CMakeFiles/lab4test.dir/src/lectureCourse.c.i
 	$(MAKE) -f CMakeFiles/lab4.dir/build.make CMakeFiles/lab4.dir/src/lectureCourse.c.i
 .PHONY : src/lectureCourse.c.i
 
@@ -228,6 +249,7 @@ src/lectureCourse.s: src/lectureCourse.c.s
 
 # target to generate assembly for a file
 src/lectureCourse.c.s:
+	$(MAKE) -f CMakeFiles/lab4test.dir/build.make CMakeFiles/lab4test.dir/src/lectureCourse.c.s
 	$(MAKE) -f CMakeFiles/lab4.dir/build.make CMakeFiles/lab4.dir/src/lectureCourse.c.s
 .PHONY : src/lectureCourse.c.s
 
@@ -237,6 +259,7 @@ src/list.o: src/list.c.o
 
 # target to build an object file
 src/list.c.o:
+	$(MAKE) -f CMakeFiles/lab4test.dir/build.make CMakeFiles/lab4test.dir/src/list.c.o
 	$(MAKE) -f CMakeFiles/lab4.dir/build.make CMakeFiles/lab4.dir/src/list.c.o
 .PHONY : src/list.c.o
 
@@ -246,6 +269,7 @@ src/list.i: src/list.c.i
 
 # target to preprocess a source file
 src/list.c.i:
+	$(MAKE) -f CMakeFiles/lab4test.dir/build.make CMakeFiles/lab4test.dir/src/list.c.i
 	$(MAKE) -f CMakeFiles/lab4.dir/build.make CMakeFiles/lab4.dir/src/list.c.i
 .PHONY : src/list.c.i
 
@@ -255,6 +279,7 @@ src/list.s: src/list.c.s
 
 # target to generate assembly for a file
 src/list.c.s:
+	$(MAKE) -f CMakeFiles/lab4test.dir/build.make CMakeFiles/lab4test.dir/src/list.c.s
 	$(MAKE) -f CMakeFiles/lab4.dir/build.make CMakeFiles/lab4.dir/src/list.c.s
 .PHONY : src/list.c.s
 
@@ -264,6 +289,7 @@ src/storage.o: src/storage.c.o
 
 # target to build an object file
 src/storage.c.o:
+	$(MAKE) -f CMakeFiles/lab4test.dir/build.make CMakeFiles/lab4test.dir/src/storage.c.o
 	$(MAKE) -f CMakeFiles/lab4.dir/build.make CMakeFiles/lab4.dir/src/storage.c.o
 .PHONY : src/storage.c.o
 
@@ -273,6 +299,7 @@ src/storage.i: src/storage.c.i
 
 # target to preprocess a source file
 src/storage.c.i:
+	$(MAKE) -f CMakeFiles/lab4test.dir/build.make CMakeFiles/lab4test.dir/src/storage.c.i
 	$(MAKE) -f CMakeFiles/lab4.dir/build.make CMakeFiles/lab4.dir/src/storage.c.i
 .PHONY : src/storage.c.i
 
@@ -282,8 +309,36 @@ src/storage.s: src/storage.c.s
 
 # target to generate assembly for a file
 src/storage.c.s:
+	$(MAKE) -f CMakeFiles/lab4test.dir/build.make CMakeFiles/lab4test.dir/src/storage.c.s
 	$(MAKE) -f CMakeFiles/lab4.dir/build.make CMakeFiles/lab4.dir/src/storage.c.s
 .PHONY : src/storage.c.s
+
+tests/main.o: tests/main.c.o
+
+.PHONY : tests/main.o
+
+# target to build an object file
+tests/main.c.o:
+	$(MAKE) -f CMakeFiles/lab4test.dir/build.make CMakeFiles/lab4test.dir/tests/main.c.o
+.PHONY : tests/main.c.o
+
+tests/main.i: tests/main.c.i
+
+.PHONY : tests/main.i
+
+# target to preprocess a source file
+tests/main.c.i:
+	$(MAKE) -f CMakeFiles/lab4test.dir/build.make CMakeFiles/lab4test.dir/tests/main.c.i
+.PHONY : tests/main.c.i
+
+tests/main.s: tests/main.c.s
+
+.PHONY : tests/main.s
+
+# target to generate assembly for a file
+tests/main.c.s:
+	$(MAKE) -f CMakeFiles/lab4test.dir/build.make CMakeFiles/lab4test.dir/tests/main.c.s
+.PHONY : tests/main.c.s
 
 # Help Target
 help:
@@ -293,6 +348,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... lab4test"
 	@echo "... lab4"
 	@echo "... main.o"
 	@echo "... main.i"
@@ -312,6 +368,9 @@ help:
 	@echo "... src/storage.o"
 	@echo "... src/storage.i"
 	@echo "... src/storage.s"
+	@echo "... tests/main.o"
+	@echo "... tests/main.i"
+	@echo "... tests/main.s"
 .PHONY : help
 
 

@@ -3,41 +3,28 @@
 #include <string.h>
 #include <stdio.h>
 
-// void copyStruct (struct lectureCourse* newStr, struct lectureCourse* oldStr){
-// //   strcpy(newStr->courseName, oldStr->courseName);
-// //   strcpy(newStr->lecturer.surname, oldStr->lecturer.surname);
-// //   strcpy(newStr->lecturer.name, oldStr->lecturer.name);
-// //   strcpy(newStr->lecturer.middlen, oldStr->lecturer.middlen);
+void copyStruct (struct lectureCourse* newStr, struct lectureCourse* oldStr){
 
-// //   newStr->lecturer.age = oldStr->lecturer.age;
-// //   newStr->length = oldStr->length;
-// //   newStr->rating = oldStr->rating;
-// }
+  if(newStr == NULL || oldStr == NULL){
+    return;
+  }
 
-// // struct lectureCourse*  deleteStruct(struct lectureCourse* pArr, int* quan, int delnum){
-// //   struct lectureCourse temp [*quan - 1];
+  LectureCourse_setCourseName(newStr, LectureCourse_getCourseName(oldStr));
 
-// //   for(int i = 0; i < delnum - 1; i ++){
-// //     copyStruct(&temp[i], &pArr[i]);
-// //   }
+  LectureCourse_setLectSurname(newStr, LectureCourse_getLectSurname(oldStr));
+  LectureCourse_setLectName(newStr, LectureCourse_getLectName(oldStr));
+  LectureCourse_setLectMiddlen(newStr, LectureCourse_getLectMiddlen(oldStr));
+  LectureCourse_setLectAge(newStr, LectureCourse_getLectAge(oldStr));
 
-// //   for(int i = delnum; i < *quan; i ++){
-// //     copyStruct(&temp[i -1], &pArr[i]);
-// //   }
+  LectureCourse_setLength(newStr, LectureCourse_getLength(oldStr));
+  LectureCourse_setRating(newStr, LectureCourse_getRating(oldStr));
+}
 
-// //   *quan = *quan - 1;
-
-// //   pArr = (struct lectureCourse*) realloc(pArr, *(quan) * sizeof(struct lectureCourse));
-
-// //   for(int i = 0; i < *quan && i != delnum + 1; i ++){
-// //     copyStruct(&pArr[i], &temp[i]);
-// //   }
-
-// //   return pArr;
-// // }
 
 void refillParam(LectureCourse* lC, int line, char str [300]){
   int var = 0;
+
+  if(str == NULL) return;
 
   switch(line){
     case 1:

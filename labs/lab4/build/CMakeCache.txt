@@ -119,7 +119,7 @@ CMAKE_OBJCOPY:FILEPATH=/usr/bin/objcopy
 CMAKE_OBJDUMP:FILEPATH=/usr/bin/objdump
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=lab4
+CMAKE_PROJECT_NAME:STATIC=lab4test
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
@@ -175,6 +175,12 @@ lab4_BINARY_DIR:STATIC=/home/august/Documents/projects/progbase2/labs/lab4/build
 
 //Value Computed by CMake
 lab4_SOURCE_DIR:STATIC=/home/august/Documents/projects/progbase2/labs/lab4
+
+//Value Computed by CMake
+lab4test_BINARY_DIR:STATIC=/home/august/Documents/projects/progbase2/labs/lab4/build
+
+//Value Computed by CMake
+lab4test_SOURCE_DIR:STATIC=/home/august/Documents/projects/progbase2/labs/lab4
 
 
 ########################

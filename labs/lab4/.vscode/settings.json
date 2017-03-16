@@ -5,7 +5,8 @@
         "-Wall",
         "-Werror",
         "-I./include",
-        "-I../include"
+        "-I../include",
+        "-I./"
     ],
     "clang.executable": "clang"
 }

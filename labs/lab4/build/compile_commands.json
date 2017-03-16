@@ -1,32 +1,62 @@
 [
 {
   "directory": "/home/august/Documents/projects/progbase2/labs/lab4/build",
-  "command": "/usr/bin/cc   -I/home/august/Documents/projects/progbase2/labs/lab4/include -I/home/august/Documents/projects/progbase2/labs/lab4/test  -g   -o CMakeFiles/lab4.dir/main.c.o   -c /home/august/Documents/projects/progbase2/labs/lab4/main.c",
-  "file": "/home/august/Documents/projects/progbase2/labs/lab4/main.c"
+  "command": "/usr/bin/cc   -I/home/august/Documents/projects/progbase2/labs/lab4/include  -g   -o CMakeFiles/lab4test.dir/tests/main.c.o   -c /home/august/Documents/projects/progbase2/labs/lab4/tests/main.c",
+  "file": "/home/august/Documents/projects/progbase2/labs/lab4/tests/main.c"
 },
 {
   "directory": "/home/august/Documents/projects/progbase2/labs/lab4/build",
-  "command": "/usr/bin/cc   -I/home/august/Documents/projects/progbase2/labs/lab4/include -I/home/august/Documents/projects/progbase2/labs/lab4/test  -g   -o CMakeFiles/lab4.dir/src/CUI.c.o   -c /home/august/Documents/projects/progbase2/labs/lab4/src/CUI.c",
+  "command": "/usr/bin/cc   -I/home/august/Documents/projects/progbase2/labs/lab4/include  -g   -o CMakeFiles/lab4test.dir/src/CUI.c.o   -c /home/august/Documents/projects/progbase2/labs/lab4/src/CUI.c",
   "file": "/home/august/Documents/projects/progbase2/labs/lab4/src/CUI.c"
 },
 {
   "directory": "/home/august/Documents/projects/progbase2/labs/lab4/build",
-  "command": "/usr/bin/cc   -I/home/august/Documents/projects/progbase2/labs/lab4/include -I/home/august/Documents/projects/progbase2/labs/lab4/test  -g   -o CMakeFiles/lab4.dir/src/list.c.o   -c /home/august/Documents/projects/progbase2/labs/lab4/src/list.c",
+  "command": "/usr/bin/cc   -I/home/august/Documents/projects/progbase2/labs/lab4/include  -g   -o CMakeFiles/lab4test.dir/src/list.c.o   -c /home/august/Documents/projects/progbase2/labs/lab4/src/list.c",
   "file": "/home/august/Documents/projects/progbase2/labs/lab4/src/list.c"
 },
 {
   "directory": "/home/august/Documents/projects/progbase2/labs/lab4/build",
-  "command": "/usr/bin/cc   -I/home/august/Documents/projects/progbase2/labs/lab4/include -I/home/august/Documents/projects/progbase2/labs/lab4/test  -g   -o CMakeFiles/lab4.dir/src/lectureCourse.c.o   -c /home/august/Documents/projects/progbase2/labs/lab4/src/lectureCourse.c",
+  "command": "/usr/bin/cc   -I/home/august/Documents/projects/progbase2/labs/lab4/include  -g   -o CMakeFiles/lab4test.dir/src/lectureCourse.c.o   -c /home/august/Documents/projects/progbase2/labs/lab4/src/lectureCourse.c",
   "file": "/home/august/Documents/projects/progbase2/labs/lab4/src/lectureCourse.c"
 },
 {
   "directory": "/home/august/Documents/projects/progbase2/labs/lab4/build",
-  "command": "/usr/bin/cc   -I/home/august/Documents/projects/progbase2/labs/lab4/include -I/home/august/Documents/projects/progbase2/labs/lab4/test  -g   -o CMakeFiles/lab4.dir/src/convert.c.o   -c /home/august/Documents/projects/progbase2/labs/lab4/src/convert.c",
+  "command": "/usr/bin/cc   -I/home/august/Documents/projects/progbase2/labs/lab4/include  -g   -o CMakeFiles/lab4test.dir/src/convert.c.o   -c /home/august/Documents/projects/progbase2/labs/lab4/src/convert.c",
   "file": "/home/august/Documents/projects/progbase2/labs/lab4/src/convert.c"
 },
 {
   "directory": "/home/august/Documents/projects/progbase2/labs/lab4/build",
-  "command": "/usr/bin/cc   -I/home/august/Documents/projects/progbase2/labs/lab4/include -I/home/august/Documents/projects/progbase2/labs/lab4/test  -g   -o CMakeFiles/lab4.dir/src/storage.c.o   -c /home/august/Documents/projects/progbase2/labs/lab4/src/storage.c",
+  "command": "/usr/bin/cc   -I/home/august/Documents/projects/progbase2/labs/lab4/include  -g   -o CMakeFiles/lab4test.dir/src/storage.c.o   -c /home/august/Documents/projects/progbase2/labs/lab4/src/storage.c",
+  "file": "/home/august/Documents/projects/progbase2/labs/lab4/src/storage.c"
+},
+{
+  "directory": "/home/august/Documents/projects/progbase2/labs/lab4/build",
+  "command": "/usr/bin/cc   -I/home/august/Documents/projects/progbase2/labs/lab4/include  -g   -o CMakeFiles/lab4.dir/main.c.o   -c /home/august/Documents/projects/progbase2/labs/lab4/main.c",
+  "file": "/home/august/Documents/projects/progbase2/labs/lab4/main.c"
+},
+{
+  "directory": "/home/august/Documents/projects/progbase2/labs/lab4/build",
+  "command": "/usr/bin/cc   -I/home/august/Documents/projects/progbase2/labs/lab4/include  -g   -o CMakeFiles/lab4.dir/src/CUI.c.o   -c /home/august/Documents/projects/progbase2/labs/lab4/src/CUI.c",
+  "file": "/home/august/Documents/projects/progbase2/labs/lab4/src/CUI.c"
+},
+{
+  "directory": "/home/august/Documents/projects/progbase2/labs/lab4/build",
+  "command": "/usr/bin/cc   -I/home/august/Documents/projects/progbase2/labs/lab4/include  -g   -o CMakeFiles/lab4.dir/src/list.c.o   -c /home/august/Documents/projects/progbase2/labs/lab4/src/list.c",
+  "file": "/home/august/Documents/projects/progbase2/labs/lab4/src/list.c"
+},
+{
+  "directory": "/home/august/Documents/projects/progbase2/labs/lab4/build",
+  "command": "/usr/bin/cc   -I/home/august/Documents/projects/progbase2/labs/lab4/include  -g   -o CMakeFiles/lab4.dir/src/lectureCourse.c.o   -c /home/august/Documents/projects/progbase2/labs/lab4/src/lectureCourse.c",
+  "file": "/home/august/Documents/projects/progbase2/labs/lab4/src/lectureCourse.c"
+},
+{
+  "directory": "/home/august/Documents/projects/progbase2/labs/lab4/build",
+  "command": "/usr/bin/cc   -I/home/august/Documents/projects/progbase2/labs/lab4/include  -g   -o CMakeFiles/lab4.dir/src/convert.c.o   -c /home/august/Documents/projects/progbase2/labs/lab4/src/convert.c",
+  "file": "/home/august/Documents/projects/progbase2/labs/lab4/src/convert.c"
+},
+{
+  "directory": "/home/august/Documents/projects/progbase2/labs/lab4/build",
+  "command": "/usr/bin/cc   -I/home/august/Documents/projects/progbase2/labs/lab4/include  -g   -o CMakeFiles/lab4.dir/src/storage.c.o   -c /home/august/Documents/projects/progbase2/labs/lab4/src/storage.c",
   "file": "/home/august/Documents/projects/progbase2/labs/lab4/src/storage.c"
 }
 ]

@@ -6,8 +6,14 @@ typedef struct lectureCourse LectureCourse;
 
 LectureCourse* LectureCourse_new(void);
 void LectureCourse_free(LectureCourse ** self);
-LectureCourse* LectureCourse_create(char cName [300], char LecSN [100], char LecN [100], char LecM [100], 
-int LecA, int length, float rating);
+LectureCourse* LectureCourse_create(
+    char cName [300], 
+    char LecSN [100], 
+    char LecN [100], 
+    char LecM [100],
+    int LecA, 
+    int length,
+    float rating);
 
 void LectureCourse_setCourseName(LectureCourse* self, char cName [300]);
 void LectureCourse_setLectSurname (LectureCourse* self, char LecSN [100]);
