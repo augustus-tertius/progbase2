@@ -1,17 +1,15 @@
 #include <stdlib.h>
 #include <stdio.h>
-#include "list.h"
-#include "events.h" 
+#include <list.h>
+#include <events.h> 
 #include <pbconsole.h>
 
-/* custom constant event type ids*/
 enum {
     KeyIsPressedTypeId,
     SomeoneJoinedChatTypeId,
     SomeoneLeftChatTypeId
 };
 
-/* event handler functions prototypes */
 void UpdatePrintHandler_update(EventHandler * self, Event * event);
 void InputHandler_update(EventHandler * self, Event * event);
 void PeopleInRoomGenerator_update(EventHandler * self, Event * event);
@@ -24,6 +22,7 @@ int main(void) {
 
     List* list = List_new();
     int* personsID = (int*)malloc(sizeof(int));
+    *personsID = 0;
 
     EventSystem_addHandler(EventHandler_new(NULL, NULL, UpdatePrintHandler_update));
     EventSystem_addHandler(EventHandler_new(NULL, NULL, InputHandler_update));
@@ -36,7 +35,6 @@ int main(void) {
     return 0;
 }
 
-/* event handlers functions implementations */
 
 void UpdatePrintHandler_update(EventHandler * self, Event * event) {
     switch (event->type) {
@@ -53,7 +51,7 @@ void UpdatePrintHandler_update(EventHandler * self, Event * event) {
 
 
 void InputHandler_update(EventHandler * self, Event * event){
-    if (conIsKeyDown()) {  // non-blocking key input check
+    if (conIsKeyDown()) { 
         char * keyCode = malloc(sizeof(int));
         fflush(stdin);
         *keyCode = getchar();
@@ -68,18 +66,15 @@ void InputHandler_update(EventHandler * self, Event * event){
 
 void PeopleInRoomGenerator_update(EventHandler * self, Event * event){
     if(event->type == KeyIsPressedTypeId){
-        if(*((char*)event->data) == '1' || *((char*)event->data) == '3' || *((char*)event->data) == '5'){
+        char* data = ((char*)event->data);
+        if( *data == '1' || *data == '3' || *data == '5'){
             (*(int*)self->data)++;
             int *newID = (int*) malloc(sizeof(int));
             *newID = *((int*)(self->data));
             printf("\nNew ID is %i", *newID);
             EventSystem_raiseEvent(Event_new(self, SomeoneJoinedChatTypeId, newID, free));
 
-        } else if(*((int*)event->data) == '2' || *((int*)event->data) == '4'){
-            // (*(int*)self->data)++;
-            // int* newID = (int*) malloc(sizeof(int));
-            // *newID = *((int*)(self->data));
-            // printf("\nNew ID is %i", *newID);
+        } else if(*data == '2' || *data == '4'){
             EventSystem_raiseEvent(Event_new(self, SomeoneLeftChatTypeId, NULL, NULL));
         }
     }
@@ -101,15 +96,16 @@ void PeopleListHandler_update(EventHandler * self, Event * event){
         } else {
             int* randomID = (int*) malloc(sizeof(int));
 
-            if(List_getSize(self->data) == 1){
+            if(List_count(self->data) == 1){
                 *randomID = 0;
             } else {
-                *randomID = rand()%(List_getSize(self->data) - 1);
+                *randomID = rand()%(List_count(self->data) - 1);
             }
             
             printf("\nRemoving someone wirh index %i", *randomID);
             printf("\nID%i had left the chat\n", *((int*)List_get(self->data, *randomID)));
 
+            free(List_get(self->data, *randomID));
             List_removeAt(self->data, *randomID);
             printf("This people are in chat now:");
             List_print(self->data);
