@@ -35,11 +35,13 @@ int main(void) {
     return 0;
 }
 
+/* event handlers functions implementations */
 
 void UpdatePrintHandler_update(EventHandler * self, Event * event) {
     switch (event->type) {
         case StartEventTypeId: {
             printf("\nChat started. Try pressing [1], [2], [3], [4], [5].\n");
+            printf("Press [q] to end chat's work.\n");
             break;
         }
         case ExitEventTypeId: {
@@ -51,7 +53,7 @@ void UpdatePrintHandler_update(EventHandler * self, Event * event) {
 
 
 void InputHandler_update(EventHandler * self, Event * event){
-    if (conIsKeyDown()) { 
+    if (conIsKeyDown()) {  // non-blocking key input check
         char * keyCode = malloc(sizeof(int));
         fflush(stdin);
         *keyCode = getchar();
@@ -75,6 +77,10 @@ void PeopleInRoomGenerator_update(EventHandler * self, Event * event){
             EventSystem_raiseEvent(Event_new(self, SomeoneJoinedChatTypeId, newID, free));
 
         } else if(*data == '2' || *data == '4'){
+            // (*(int*)self->data)++;
+            // int* newID = (int*) malloc(sizeof(int));
+            // *newID = *((int*)(self->data));
+            // printf("\nNew ID is %i", *newID);
             EventSystem_raiseEvent(Event_new(self, SomeoneLeftChatTypeId, NULL, NULL));
         }
     }
@@ -106,6 +112,7 @@ void PeopleListHandler_update(EventHandler * self, Event * event){
             printf("\nID%i had left the chat\n", *((int*)List_get(self->data, *randomID)));
 
             free(List_get(self->data, *randomID));
+
             List_removeAt(self->data, *randomID);
             printf("This people are in chat now:");
             List_print(self->data);
