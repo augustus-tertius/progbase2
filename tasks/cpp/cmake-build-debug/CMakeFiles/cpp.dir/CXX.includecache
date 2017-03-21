@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/sphere.h
+
+/home/august/Documents/projects/progbase2/tasks/cpp/main.cpp
+iostream
+-
+
+/home/august/Documents/projects/progbase2/tasks/cpp/src/sphere.cpp
+sphere.h
+/home/august/Documents/projects/progbase2/tasks/cpp/src/sphere.h
+
