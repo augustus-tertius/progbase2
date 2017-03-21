@@ -1,0 +1,32 @@
+[
+{
+  "directory": "/home/august/Documents/projects/progbase2/labs/lab5/build",
+  "command": "/usr/bin/cc   -I/home/august/Documents/projects/progbase2/labs/lab5/include  -std=c11 -g -Werror -Wall -fms-extensions -g   -o CMakeFiles/lab5.dir/main.c.o   -c /home/august/Documents/projects/progbase2/labs/lab5/main.c",
+  "file": "/home/august/Documents/projects/progbase2/labs/lab5/main.c"
+},
+{
+  "directory": "/home/august/Documents/projects/progbase2/labs/lab5/build",
+  "command": "/usr/bin/cc   -I/home/august/Documents/projects/progbase2/labs/lab5/include  -std=c11 -g -Werror -Wall -fms-extensions -g   -o CMakeFiles/lab5.dir/src/CUI.c.o   -c /home/august/Documents/projects/progbase2/labs/lab5/src/CUI.c",
+  "file": "/home/august/Documents/projects/progbase2/labs/lab5/src/CUI.c"
+},
+{
+  "directory": "/home/august/Documents/projects/progbase2/labs/lab5/build",
+  "command": "/usr/bin/cc   -I/home/august/Documents/projects/progbase2/labs/lab5/include  -std=c11 -g -Werror -Wall -fms-extensions -g   -o CMakeFiles/lab5.dir/src/list.c.o   -c /home/august/Documents/projects/progbase2/labs/lab5/src/list.c",
+  "file": "/home/august/Documents/projects/progbase2/labs/lab5/src/list.c"
+},
+{
+  "directory": "/home/august/Documents/projects/progbase2/labs/lab5/build",
+  "command": "/usr/bin/cc   -I/home/august/Documents/projects/progbase2/labs/lab5/include  -std=c11 -g -Werror -Wall -fms-extensions -g   -o CMakeFiles/lab5.dir/src/lectureCourse.c.o   -c /home/august/Documents/projects/progbase2/labs/lab5/src/lectureCourse.c",
+  "file": "/home/august/Documents/projects/progbase2/labs/lab5/src/lectureCourse.c"
+},
+{
+  "directory": "/home/august/Documents/projects/progbase2/labs/lab5/build",
+  "command": "/usr/bin/cc   -I/home/august/Documents/projects/progbase2/labs/lab5/include  -std=c11 -g -Werror -Wall -fms-extensions -g   -o CMakeFiles/lab5.dir/src/convert.c.o   -c /home/august/Documents/projects/progbase2/labs/lab5/src/convert.c",
+  "file": "/home/august/Documents/projects/progbase2/labs/lab5/src/convert.c"
+},
+{
+  "directory": "/home/august/Documents/projects/progbase2/labs/lab5/build",
+  "command": "/usr/bin/cc   -I/home/august/Documents/projects/progbase2/labs/lab5/include  -std=c11 -g -Werror -Wall -fms-extensions -g   -o CMakeFiles/lab5.dir/src/storage.c.o   -c /home/august/Documents/projects/progbase2/labs/lab5/src/storage.c",
+  "file": "/home/august/Documents/projects/progbase2/labs/lab5/src/storage.c"
+}
+]
