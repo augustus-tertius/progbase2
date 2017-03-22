@@ -56,16 +56,27 @@ CMAKE_BINARY_DIR = /home/august/Documents/projects/progbase2/labs/lab5/build
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
 
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
 
-.PHONY : edit_cache/fast
+# Special rule for the target list_install_components
+list_install_components:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"Unspecified\""
+.PHONY : list_install_components
+
+# Special rule for the target list_install_components
+list_install_components/fast: list_install_components
+
+.PHONY : list_install_components/fast
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
@@ -77,6 +88,39 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 
 .PHONY : rebuild_cache/fast
+
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
+# Special rule for the target install/strip
+install/strip: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
+	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
+.PHONY : install/strip
+
+# Special rule for the target install/strip
+install/strip/fast: install/strip
+
+.PHONY : install/strip/fast
+
+# Special rule for the target install/local
+install/local: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
+	/usr/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
+.PHONY : install/local
+
+# Special rule for the target install/local
+install/local/fast: install/local
+
+.PHONY : install/local/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -111,17 +155,30 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named lab5
+# Target rules for targets named mylab5
 
 # Build rule for target.
-lab5: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 lab5
-.PHONY : lab5
+mylab5: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 mylab5
+.PHONY : mylab5
 
 # fast build rule for target.
-lab5/fast:
-	$(MAKE) -f CMakeFiles/lab5.dir/build.make CMakeFiles/lab5.dir/build
-.PHONY : lab5/fast
+mylab5/fast:
+	$(MAKE) -f CMakeFiles/mylab5.dir/build.make CMakeFiles/mylab5.dir/build
+.PHONY : mylab5/fast
+
+#=============================================================================
+# Target rules for targets named lab
+
+# Build rule for target.
+lab: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 lab
+.PHONY : lab
+
+# fast build rule for target.
+lab/fast:
+	$(MAKE) -f CMakeFiles/lab.dir/build.make CMakeFiles/lab.dir/build
+.PHONY : lab/fast
 
 main.o: main.c.o
 
@@ -129,7 +186,7 @@ main.o: main.c.o
 
 # target to build an object file
 main.c.o:
-	$(MAKE) -f CMakeFiles/lab5.dir/build.make CMakeFiles/lab5.dir/main.c.o
+	$(MAKE) -f CMakeFiles/lab.dir/build.make CMakeFiles/lab.dir/main.c.o
 .PHONY : main.c.o
 
 main.i: main.c.i
@@ -138,7 +195,7 @@ main.i: main.c.i
 
 # target to preprocess a source file
 main.c.i:
-	$(MAKE) -f CMakeFiles/lab5.dir/build.make CMakeFiles/lab5.dir/main.c.i
+	$(MAKE) -f CMakeFiles/lab.dir/build.make CMakeFiles/lab.dir/main.c.i
 .PHONY : main.c.i
 
 main.s: main.c.s
@@ -147,7 +204,7 @@ main.s: main.c.s
 
 # target to generate assembly for a file
 main.c.s:
-	$(MAKE) -f CMakeFiles/lab5.dir/build.make CMakeFiles/lab5.dir/main.c.s
+	$(MAKE) -f CMakeFiles/lab.dir/build.make CMakeFiles/lab.dir/main.c.s
 .PHONY : main.c.s
 
 src/CUI.o: src/CUI.c.o
@@ -156,7 +213,8 @@ src/CUI.o: src/CUI.c.o
 
 # target to build an object file
 src/CUI.c.o:
-	$(MAKE) -f CMakeFiles/lab5.dir/build.make CMakeFiles/lab5.dir/src/CUI.c.o
+	$(MAKE) -f CMakeFiles/mylab5.dir/build.make CMakeFiles/mylab5.dir/src/CUI.c.o
+	$(MAKE) -f CMakeFiles/lab.dir/build.make CMakeFiles/lab.dir/src/CUI.c.o
 .PHONY : src/CUI.c.o
 
 src/CUI.i: src/CUI.c.i
@@ -165,7 +223,8 @@ src/CUI.i: src/CUI.c.i
 
 # target to preprocess a source file
 src/CUI.c.i:
-	$(MAKE) -f CMakeFiles/lab5.dir/build.make CMakeFiles/lab5.dir/src/CUI.c.i
+	$(MAKE) -f CMakeFiles/mylab5.dir/build.make CMakeFiles/mylab5.dir/src/CUI.c.i
+	$(MAKE) -f CMakeFiles/lab.dir/build.make CMakeFiles/lab.dir/src/CUI.c.i
 .PHONY : src/CUI.c.i
 
 src/CUI.s: src/CUI.c.s
@@ -174,7 +233,8 @@ src/CUI.s: src/CUI.c.s
 
 # target to generate assembly for a file
 src/CUI.c.s:
-	$(MAKE) -f CMakeFiles/lab5.dir/build.make CMakeFiles/lab5.dir/src/CUI.c.s
+	$(MAKE) -f CMakeFiles/mylab5.dir/build.make CMakeFiles/mylab5.dir/src/CUI.c.s
+	$(MAKE) -f CMakeFiles/lab.dir/build.make CMakeFiles/lab.dir/src/CUI.c.s
 .PHONY : src/CUI.c.s
 
 src/convert.o: src/convert.c.o
@@ -183,7 +243,8 @@ src/convert.o: src/convert.c.o
 
 # target to build an object file
 src/convert.c.o:
-	$(MAKE) -f CMakeFiles/lab5.dir/build.make CMakeFiles/lab5.dir/src/convert.c.o
+	$(MAKE) -f CMakeFiles/mylab5.dir/build.make CMakeFiles/mylab5.dir/src/convert.c.o
+	$(MAKE) -f CMakeFiles/lab.dir/build.make CMakeFiles/lab.dir/src/convert.c.o
 .PHONY : src/convert.c.o
 
 src/convert.i: src/convert.c.i
@@ -192,7 +253,8 @@ src/convert.i: src/convert.c.i
 
 # target to preprocess a source file
 src/convert.c.i:
-	$(MAKE) -f CMakeFiles/lab5.dir/build.make CMakeFiles/lab5.dir/src/convert.c.i
+	$(MAKE) -f CMakeFiles/mylab5.dir/build.make CMakeFiles/mylab5.dir/src/convert.c.i
+	$(MAKE) -f CMakeFiles/lab.dir/build.make CMakeFiles/lab.dir/src/convert.c.i
 .PHONY : src/convert.c.i
 
 src/convert.s: src/convert.c.s
@@ -201,7 +263,8 @@ src/convert.s: src/convert.c.s
 
 # target to generate assembly for a file
 src/convert.c.s:
-	$(MAKE) -f CMakeFiles/lab5.dir/build.make CMakeFiles/lab5.dir/src/convert.c.s
+	$(MAKE) -f CMakeFiles/mylab5.dir/build.make CMakeFiles/mylab5.dir/src/convert.c.s
+	$(MAKE) -f CMakeFiles/lab.dir/build.make CMakeFiles/lab.dir/src/convert.c.s
 .PHONY : src/convert.c.s
 
 src/lectureCourse.o: src/lectureCourse.c.o
@@ -210,7 +273,8 @@ src/lectureCourse.o: src/lectureCourse.c.o
 
 # target to build an object file
 src/lectureCourse.c.o:
-	$(MAKE) -f CMakeFiles/lab5.dir/build.make CMakeFiles/lab5.dir/src/lectureCourse.c.o
+	$(MAKE) -f CMakeFiles/mylab5.dir/build.make CMakeFiles/mylab5.dir/src/lectureCourse.c.o
+	$(MAKE) -f CMakeFiles/lab.dir/build.make CMakeFiles/lab.dir/src/lectureCourse.c.o
 .PHONY : src/lectureCourse.c.o
 
 src/lectureCourse.i: src/lectureCourse.c.i
@@ -219,7 +283,8 @@ src/lectureCourse.i: src/lectureCourse.c.i
 
 # target to preprocess a source file
 src/lectureCourse.c.i:
-	$(MAKE) -f CMakeFiles/lab5.dir/build.make CMakeFiles/lab5.dir/src/lectureCourse.c.i
+	$(MAKE) -f CMakeFiles/mylab5.dir/build.make CMakeFiles/mylab5.dir/src/lectureCourse.c.i
+	$(MAKE) -f CMakeFiles/lab.dir/build.make CMakeFiles/lab.dir/src/lectureCourse.c.i
 .PHONY : src/lectureCourse.c.i
 
 src/lectureCourse.s: src/lectureCourse.c.s
@@ -228,7 +293,8 @@ src/lectureCourse.s: src/lectureCourse.c.s
 
 # target to generate assembly for a file
 src/lectureCourse.c.s:
-	$(MAKE) -f CMakeFiles/lab5.dir/build.make CMakeFiles/lab5.dir/src/lectureCourse.c.s
+	$(MAKE) -f CMakeFiles/mylab5.dir/build.make CMakeFiles/mylab5.dir/src/lectureCourse.c.s
+	$(MAKE) -f CMakeFiles/lab.dir/build.make CMakeFiles/lab.dir/src/lectureCourse.c.s
 .PHONY : src/lectureCourse.c.s
 
 src/list.o: src/list.c.o
@@ -237,7 +303,8 @@ src/list.o: src/list.c.o
 
 # target to build an object file
 src/list.c.o:
-	$(MAKE) -f CMakeFiles/lab5.dir/build.make CMakeFiles/lab5.dir/src/list.c.o
+	$(MAKE) -f CMakeFiles/mylab5.dir/build.make CMakeFiles/mylab5.dir/src/list.c.o
+	$(MAKE) -f CMakeFiles/lab.dir/build.make CMakeFiles/lab.dir/src/list.c.o
 .PHONY : src/list.c.o
 
 src/list.i: src/list.c.i
@@ -246,7 +313,8 @@ src/list.i: src/list.c.i
 
 # target to preprocess a source file
 src/list.c.i:
-	$(MAKE) -f CMakeFiles/lab5.dir/build.make CMakeFiles/lab5.dir/src/list.c.i
+	$(MAKE) -f CMakeFiles/mylab5.dir/build.make CMakeFiles/mylab5.dir/src/list.c.i
+	$(MAKE) -f CMakeFiles/lab.dir/build.make CMakeFiles/lab.dir/src/list.c.i
 .PHONY : src/list.c.i
 
 src/list.s: src/list.c.s
@@ -255,7 +323,8 @@ src/list.s: src/list.c.s
 
 # target to generate assembly for a file
 src/list.c.s:
-	$(MAKE) -f CMakeFiles/lab5.dir/build.make CMakeFiles/lab5.dir/src/list.c.s
+	$(MAKE) -f CMakeFiles/mylab5.dir/build.make CMakeFiles/mylab5.dir/src/list.c.s
+	$(MAKE) -f CMakeFiles/lab.dir/build.make CMakeFiles/lab.dir/src/list.c.s
 .PHONY : src/list.c.s
 
 src/storage.o: src/storage.c.o
@@ -264,7 +333,8 @@ src/storage.o: src/storage.c.o
 
 # target to build an object file
 src/storage.c.o:
-	$(MAKE) -f CMakeFiles/lab5.dir/build.make CMakeFiles/lab5.dir/src/storage.c.o
+	$(MAKE) -f CMakeFiles/mylab5.dir/build.make CMakeFiles/mylab5.dir/src/storage.c.o
+	$(MAKE) -f CMakeFiles/lab.dir/build.make CMakeFiles/lab.dir/src/storage.c.o
 .PHONY : src/storage.c.o
 
 src/storage.i: src/storage.c.i
@@ -273,7 +343,8 @@ src/storage.i: src/storage.c.i
 
 # target to preprocess a source file
 src/storage.c.i:
-	$(MAKE) -f CMakeFiles/lab5.dir/build.make CMakeFiles/lab5.dir/src/storage.c.i
+	$(MAKE) -f CMakeFiles/mylab5.dir/build.make CMakeFiles/mylab5.dir/src/storage.c.i
+	$(MAKE) -f CMakeFiles/lab.dir/build.make CMakeFiles/lab.dir/src/storage.c.i
 .PHONY : src/storage.c.i
 
 src/storage.s: src/storage.c.s
@@ -282,7 +353,8 @@ src/storage.s: src/storage.c.s
 
 # target to generate assembly for a file
 src/storage.c.s:
-	$(MAKE) -f CMakeFiles/lab5.dir/build.make CMakeFiles/lab5.dir/src/storage.c.s
+	$(MAKE) -f CMakeFiles/mylab5.dir/build.make CMakeFiles/mylab5.dir/src/storage.c.s
+	$(MAKE) -f CMakeFiles/lab.dir/build.make CMakeFiles/lab.dir/src/storage.c.s
 .PHONY : src/storage.c.s
 
 # Help Target
@@ -291,9 +363,14 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... edit_cache"
+	@echo "... install"
+	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... lab5"
+	@echo "... edit_cache"
+	@echo "... mylab5"
+	@echo "... lab"
+	@echo "... install/strip"
+	@echo "... install/local"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

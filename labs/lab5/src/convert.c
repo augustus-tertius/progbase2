@@ -69,7 +69,7 @@ int searchStr(List* list, int quan, int x, struct lectureCourse* res[]){
 }
 
  char* structToStr(struct lectureCourse* lC, char str [1000]){
-   char buffer [20] = "";
+   char buffer [20] = "\0";
    str[0] = '\0';
 
    if(lC == NULL){

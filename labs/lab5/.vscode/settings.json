@@ -6,7 +6,9 @@
         "-Werror",
         "-I./include",
         "-I../include",
-        "-I./"
+        "-I./",
+        "-I/usr/include/libxml2",
+        "-I/usr/include/libjansson-dev"
     ],
     "clang.executable": "clang"
 }

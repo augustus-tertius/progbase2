@@ -1,3 +1,8 @@
-/home/august/Documents/projects/progbase2/labs/lab5/build/CMakeFiles/edit_cache.dir
+/home/august/Documents/projects/progbase2/labs/lab5/build/CMakeFiles/install.dir
+/home/august/Documents/projects/progbase2/labs/lab5/build/CMakeFiles/list_install_components.dir
 /home/august/Documents/projects/progbase2/labs/lab5/build/CMakeFiles/rebuild_cache.dir
-/home/august/Documents/projects/progbase2/labs/lab5/build/CMakeFiles/lab5.dir
+/home/august/Documents/projects/progbase2/labs/lab5/build/CMakeFiles/edit_cache.dir
+/home/august/Documents/projects/progbase2/labs/lab5/build/CMakeFiles/mylab5.dir
+/home/august/Documents/projects/progbase2/labs/lab5/build/CMakeFiles/lab.dir
+/home/august/Documents/projects/progbase2/labs/lab5/build/CMakeFiles/install/strip.dir
+/home/august/Documents/projects/progbase2/labs/lab5/build/CMakeFiles/install/local.dir

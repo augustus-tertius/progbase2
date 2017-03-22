@@ -1,0 +1,6 @@
+/usr/local/include/convert.h
+/usr/local/include/lectureCourse.h
+/usr/local/include/storage.h
+/usr/local/include/list.h
+/usr/local/include/CUI.h
+/usr/local/lib/libmylab5.a

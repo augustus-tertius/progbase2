@@ -6,6 +6,25 @@
 #define empty(MEM, SIZE) memset(MEM, 0, SIZE)
 #define throw(MSG) assert(0 && MSG);
 
+typedef struct Array Array;
+
+/**
+    helper type for list methods implementation 
+*/
+struct Array {
+    size_t itemSize;
+    char * items;
+    size_t length;
+};
+
+void Array_copy(
+    Array sourceArray,
+    int sourceIndex,
+    Array destinationArray,
+    int destinationIndex,
+    int length
+);
+
 struct List {
     size_t capacity;
     size_t size;
@@ -74,15 +93,14 @@ int List_remove(List * self, void * ref) {
 
 void List_removeAt(List * self, int index) {
     if (index < 0 || index >= self->size) throw("Index out of bounds");
-
-    (self->size)--;
-
+    self->size--;
     if (index < self->size) {
-        for(int i = index; i < self->size; i++){
-            self->items[i] = self->items[i + 1];
-        }
-
-        self->items[self->size - 1] = NULL;
+        Array items = {
+            .itemSize = sizeof(void *),
+            .items = (char *)self->items,
+            .length = self->size
+        };
+        Array_copy(items, index + 1, items, index, self->size - index);
     }
 }
 
@@ -104,6 +122,19 @@ static void __ensureCapacity(List * self, size_t min) {
     }
 }
 
-int List_getSize(List* self){
-    return self->size;
+/* array.c */
+
+void Array_copy(
+    Array sourceArray,
+    int sourceIndex,
+    Array destinationArray,
+    int destinationIndex,
+    int length
+) {
+    // @todo add checks
+    size_t itemSize = sourceArray.itemSize;
+    size_t copySize = itemSize * length;
+    char buffer[copySize];
+    memcpy(buffer, sourceArray.items + (sourceIndex) * itemSize, copySize);
+    memcpy(destinationArray.items + (destinationIndex) * itemSize, buffer, copySize);
 }

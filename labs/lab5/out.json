@@ -1,0 +1,57 @@
+[
+  {
+    "courseName": "Випічка та кондитерське мистецтво",
+    "lecturer": {
+      "name": "Вікторія",
+      "surname": "Марішина",
+      "middlen": "Петрівна",
+      "age": 27
+    },
+    "length": 80,
+    "rating": 4.5
+  },
+  {
+    "courseName": "Прикладне будівництво",
+    "lecturer": {
+      "name": "Антон",
+      "surname": "Кузнецов",
+      "middlen": "Володимирович",
+      "age": 54
+    },
+    "length": 36,
+    "rating": 4.6999998092651367
+  },
+  {
+    "courseName": "laskdjfoi",
+    "lecturer": {
+      "name": "wehfkjd",
+      "surname": "lskdjf",
+      "middlen": "wehdskj",
+      "age": 23
+    },
+    "length": 65432,
+    "rating": 4.4000000953674316
+  },
+  {
+    "courseName": "Електротехніка",
+    "lecturer": {
+      "name": "Олена",
+      "surname": "Бужко",
+      "middlen": "Миколаївна",
+      "age": 51
+    },
+    "length": 48,
+    "rating": 4.8000001907348633
+  },
+  {
+    "courseName": "Дитяча психологія",
+    "lecturer": {
+      "name": "Микола",
+      "surname": "Іванов",
+      "middlen": "Якович",
+      "age": 38
+    },
+    "length": 50,
+    "rating": 4.1999998092651367
+  }
+]

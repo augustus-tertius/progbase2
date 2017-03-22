@@ -1,1 +1,0 @@
-/usr/bin/cc  -g   CMakeFiles/lab4test.dir/tests/main.c.o CMakeFiles/lab4test.dir/src/CUI.c.o CMakeFiles/lab4test.dir/src/list.c.o CMakeFiles/lab4test.dir/src/lectureCourse.c.o CMakeFiles/lab4test.dir/src/convert.c.o CMakeFiles/lab4test.dir/src/storage.c.o  -o lab4test -rdynamic -lprogbase -lcheck 

@@ -16,6 +16,6 @@ void List_removeAt(List * self, int index);
 int List_isEmpty(List * self);
 int  List_count(List * self);
 int  List_indexOf(List * self, void * ref);
-int List_getSize(List* self);
+
 
 #endif 

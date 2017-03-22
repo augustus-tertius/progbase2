@@ -1,0 +1,1 @@
+/usr/bin/cc  -g   CMakeFiles/lab.dir/main.c.o CMakeFiles/lab.dir/src/CUI.c.o CMakeFiles/lab.dir/src/list.c.o CMakeFiles/lab.dir/src/lectureCourse.c.o CMakeFiles/lab.dir/src/convert.c.o CMakeFiles/lab.dir/src/storage.c.o  -o lab -rdynamic -lcheck -ljansson -lxml2 -lprogbase libmylab5.a -lprogbase -lxml2 -ljansson 

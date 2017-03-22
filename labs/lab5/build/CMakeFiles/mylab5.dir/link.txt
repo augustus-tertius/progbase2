@@ -1,0 +1,2 @@
+/usr/bin/ar qc libmylab5.a  CMakeFiles/mylab5.dir/src/CUI.c.o CMakeFiles/mylab5.dir/src/list.c.o CMakeFiles/mylab5.dir/src/lectureCourse.c.o CMakeFiles/mylab5.dir/src/convert.c.o CMakeFiles/mylab5.dir/src/storage.c.o
+/usr/bin/ranlib libmylab5.a

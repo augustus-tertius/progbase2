@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lectureCourses>
+  <lectureCourse>
+    <courseName>Випічка та кондитерське мистецтво</courseName>
+    <lecturer>
+      <surname>Марішина</surname>
+      <name>Вікторія</name>
+      <middlen>Петрівна</middlen>
+      <age>27</age>
+    </lecturer>
+    <length>80</length>
+    <rating>4.5</rating>
+  </lectureCourse>
+  <lectureCourse>
+    <courseName>Прикладне будівництво</courseName>
+    <lecturer>
+      <surname>Кузнецов</surname>
+      <name>Антон</name>
+      <middlen>Володимирович</middlen>
+      <age>54</age>
+    </lecturer>
+    <length>36</length>
+    <rating>4.7</rating>
+  </lectureCourse>
+  <lectureCourse>
+    <courseName>Культура сучасного кіно</courseName>
+    <lecturer>
+      <surname>Еременко</surname>
+      <name>Арсеній</name>
+      <middlen>Арнольдович</middlen>
+      <age>45</age>
+    </lecturer>
+    <length>18</length>
+    <rating>3.9</rating>
+  </lectureCourse>
+  <lectureCourse>
+    <courseName>Електротехніка</courseName>
+    <lecturer>
+      <surname>Бужко</surname>
+      <name>Олена</name>
+      <middlen>Миколаївна</middlen>
+      <age>51</age>
+    </lecturer>
+    <length>48</length>
+    <rating>4.8</rating>
+  </lectureCourse>
+  <lectureCourse>
+    <courseName>Дитяча психологія</courseName>
+    <lecturer>
+      <surname>Іванов</surname>
+      <name>Микола</name>
+      <middlen>Якович</middlen>
+      <age>38</age>
+    </lecturer>
+    <length>50</length>
+    <rating>4.2</rating>
+  </lectureCourse>
+</lectureCourses>
