@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/august/Documents/projects/progbase2/tasks/cpp/include/Ball.h
+string
+-
+
+/home/august/Documents/projects/progbase2/tasks/cpp/main.cpp
+iostream
+-
+vector
+-
+iostream
+-
+include/Ball.h
+/home/august/Documents/projects/progbase2/tasks/cpp/include/Ball.h
+
+/home/august/Documents/projects/progbase2/tasks/cpp/src/Ball.cpp
+iostream
+-
+cmath
+-
+../include/Ball.h
+/home/august/Documents/projects/progbase2/tasks/cpp/include/Ball.h
+

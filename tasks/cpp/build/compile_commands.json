@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/home/august/Documents/projects/progbase2/tasks/cpp/build",
+  "command": "/usr/bin/c++    -I/home/august/Documents/projects/progbase2/tasks/cpp/cmake-build-debug -I/home/august/Documents/projects/progbase2/tasks/cpp/include  -g   -std=gnu++11 -o CMakeFiles/cpp.dir/main.cpp.o -c /home/august/Documents/projects/progbase2/tasks/cpp/main.cpp",
+  "file": "/home/august/Documents/projects/progbase2/tasks/cpp/main.cpp"
+},
+{
+  "directory": "/home/august/Documents/projects/progbase2/tasks/cpp/build",
+  "command": "/usr/bin/c++    -I/home/august/Documents/projects/progbase2/tasks/cpp/cmake-build-debug -I/home/august/Documents/projects/progbase2/tasks/cpp/include  -g   -std=gnu++11 -o CMakeFiles/cpp.dir/src/Ball.cpp.o -c /home/august/Documents/projects/progbase2/tasks/cpp/src/Ball.cpp",
+  "file": "/home/august/Documents/projects/progbase2/tasks/cpp/src/Ball.cpp"
+}
+]
