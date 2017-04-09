@@ -27,6 +27,8 @@ private slots:
 
     void on_removeButton_clicked();
 
+    void on_searchButton_clicked();
+
 private:
     Ui::MainWindow *ui;
 };

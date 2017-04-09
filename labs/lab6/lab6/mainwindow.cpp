@@ -25,14 +25,6 @@ void MainWindow::on_addButton_clicked()
     dialog->setWindowTitle("Create a new lecture course");
 
     if(dialog->exec()){
-//        QVariant qVariant;
-//        qVariant.setValue(*lc);
-
-//        QListWidgetItem *item = new QListWidgetItem();
-//        item->setText(lc->getCourseName());
-//        item->setData(Qt::UserRole, qVariant);
-
-//        ui->listWidget->addItem(item);
         lectureCourse * lc = dialog->getData();
         this->list.push_back(lc);
         ui->listWidget->addItem(lc->getCourseName());
@@ -81,4 +73,19 @@ void MainWindow::on_removeButton_clicked()
      list.erase(list.begin()+index);
 
      this->on_listWidget_itemSelectionChanged();
+}
+
+void MainWindow::on_searchButton_clicked()
+{
+    int len = ui->lengthSpinBox->value();
+
+    ui->resultsListWidget->clear();
+
+    for(auto it = std::begin(this->list); it != std::end(this->list); it++){
+        lectureCourse * cur = *it.base();
+
+       if(cur->getLength() >= len){
+           ui->resultsListWidget->addItem(cur->getCourseName());
+       }
+    }
 }

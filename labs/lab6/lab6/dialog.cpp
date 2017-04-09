@@ -10,13 +10,6 @@ Dialog::Dialog(QWidget *parent) :
     ui->setupUi(this);
 }
 
-//Dialog::Dialog(lectureCourse* lc, QWidget *parent) :
-//    QDialog(parent),
-//    ui(new Ui::Dialog)
-//{
-//    ui->setupUi(this);
-//}
-
 lectureCourse* Dialog::getData(){
         QString courseName = ui->courseNameEdit->text();
         int length = ui->lengthSpinBox->value();

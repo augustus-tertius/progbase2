@@ -15,7 +15,6 @@ class Dialog : public QDialog
 
 public:
     explicit Dialog(QWidget *parent = 0);
-//    Dialog(lectureCourse* lc = NULL, QWidget *parent = 0);
     lectureCourse* getData();
     ~Dialog();
 

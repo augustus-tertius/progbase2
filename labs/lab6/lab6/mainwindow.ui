@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>556</width>
-    <height>457</height>
+    <width>567</width>
+    <height>453</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -30,11 +30,11 @@
       <x>0</x>
       <y>0</y>
       <width>551</width>
-      <height>401</height>
+      <height>391</height>
      </rect>
     </property>
     <property name="toolTip">
-     <string>Take a look at all of your lecture courses</string>
+     <string/>
     </property>
     <property name="tabShape">
      <enum>QTabWidget::Triangular</enum>
@@ -44,7 +44,7 @@
     </property>
     <widget class="QWidget" name="tab">
      <attribute name="title">
-      <string>Tab 1</string>
+      <string>Lecture Courses</string>
      </attribute>
      <layout class="QHBoxLayout" name="horizontalLayout">
       <item>
@@ -241,7 +241,7 @@
     </widget>
     <widget class="QWidget" name="tab_2">
      <attribute name="title">
-      <string>Tab 2</string>
+      <string>Search</string>
      </attribute>
      <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
@@ -265,26 +265,39 @@
          <property name="suffix">
           <string>  hrs</string>
          </property>
+         <property name="maximum">
+          <number>1000</number>
+         </property>
         </widget>
        </item>
-       <item row="1" column="1">
+       <item row="5" column="0" colspan="2">
+        <widget class="QListWidget" name="resultsListWidget">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;List of lecture courses found with your parametrs&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="selectionMode">
+          <enum>QAbstractItemView::NoSelection</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
         <widget class="QPushButton" name="searchButton">
+         <property name="toolTip">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Click to see the list of lecture courses longer than selected value&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
          <property name="text">
           <string>Search</string>
          </property>
         </widget>
        </item>
-       <item row="2" column="0">
-        <widget class="QLabel" name="label_19">
-         <property name="text">
-          <string>      Results:</string>
-         </property>
-        </widget>
-       </item>
-       <item row="3" column="0" colspan="2">
-        <widget class="QListWidget" name="resultsListWidget"/>
-       </item>
       </layout>
+      <zorder>resultsListWidget</zorder>
+      <zorder>label_18</zorder>
+      <zorder>lengthSpinBox</zorder>
+      <zorder>searchButton</zorder>
      </widget>
     </widget>
    </widget>
@@ -294,7 +307,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>556</width>
+     <width>567</width>
      <height>22</height>
     </rect>
    </property>
