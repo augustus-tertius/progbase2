@@ -1,0 +1,17 @@
+[
+{
+  "directory": "/home/august/Documents/projects/progbase2/tasks/tcp_сlient/server/build",
+  "command": "/usr/bin/cc   -I/home/august/Documents/projects/progbase2/tasks/tcp_сlient/server/include  -std=c99 -Werror -Wall -g   -std=gnu99 -o CMakeFiles/server.dir/main.c.o   -c /home/august/Documents/projects/progbase2/tasks/tcp_сlient/server/main.c",
+  "file": "/home/august/Documents/projects/progbase2/tasks/tcp_сlient/server/main.c"
+},
+{
+  "directory": "/home/august/Documents/projects/progbase2/tasks/tcp_сlient/server/build",
+  "command": "/usr/bin/cc   -I/home/august/Documents/projects/progbase2/tasks/tcp_сlient/server/include  -std=c99 -Werror -Wall -g   -std=gnu99 -o CMakeFiles/server.dir/handlers.c.o   -c /home/august/Documents/projects/progbase2/tasks/tcp_сlient/server/handlers.c",
+  "file": "/home/august/Documents/projects/progbase2/tasks/tcp_сlient/server/handlers.c"
+},
+{
+  "directory": "/home/august/Documents/projects/progbase2/tasks/tcp_сlient/server/build",
+  "command": "/usr/bin/cc   -I/home/august/Documents/projects/progbase2/tasks/tcp_сlient/server/include  -std=c99 -Werror -Wall -g   -std=gnu99 -o CMakeFiles/server.dir/src/request.c.o   -c /home/august/Documents/projects/progbase2/tasks/tcp_сlient/server/src/request.c",
+  "file": "/home/august/Documents/projects/progbase2/tasks/tcp_сlient/server/src/request.c"
+}
+]
