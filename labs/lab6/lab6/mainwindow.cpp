@@ -69,7 +69,10 @@ void MainWindow::on_removeButton_clicked()
      int index = ui->listWidget->row(items[0]);
 
      delete ui->listWidget->takeItem(index);
-     delete list.operator[](index);
+
+     lectureCourse* toDelete = list.operator[](index);
+     delete toDelete->getLecturer();
+     delete toDelete;
      list.erase(list.begin()+index);
 
      this->on_listWidget_itemSelectionChanged();

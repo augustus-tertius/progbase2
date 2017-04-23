@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/august/Documents/projects/progbase2/tasks/uddp/client.c
+stdlib.h
+-
+stdio.h
+-
+errno.h
+-
+progbase/net.h
+-
+

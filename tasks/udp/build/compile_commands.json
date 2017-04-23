@@ -1,0 +1,22 @@
+[
+{
+  "directory": "/home/august/Documents/projects/progbase2/tasks/uddp/build",
+  "command": "/usr/bin/cc   -I/home/august/Documents/projects/progbase2/tasks/uddp/include  -g   -o CMakeFiles/client.dir/client.c.o   -c /home/august/Documents/projects/progbase2/tasks/uddp/client.c",
+  "file": "/home/august/Documents/projects/progbase2/tasks/uddp/client.c"
+},
+{
+  "directory": "/home/august/Documents/projects/progbase2/tasks/uddp/build",
+  "command": "/usr/bin/cc   -I/home/august/Documents/projects/progbase2/tasks/uddp/include  -g   -o CMakeFiles/server.dir/server.c.o   -c /home/august/Documents/projects/progbase2/tasks/uddp/server.c",
+  "file": "/home/august/Documents/projects/progbase2/tasks/uddp/server.c"
+},
+{
+  "directory": "/home/august/Documents/projects/progbase2/tasks/uddp/build",
+  "command": "/usr/bin/cc   -I/home/august/Documents/projects/progbase2/tasks/uddp/include  -g   -o CMakeFiles/server.dir/src/queue.c.o   -c /home/august/Documents/projects/progbase2/tasks/uddp/src/queue.c",
+  "file": "/home/august/Documents/projects/progbase2/tasks/uddp/src/queue.c"
+},
+{
+  "directory": "/home/august/Documents/projects/progbase2/tasks/uddp/build",
+  "command": "/usr/bin/cc   -I/home/august/Documents/projects/progbase2/tasks/uddp/include  -g   -o CMakeFiles/server.dir/src/list.c.o   -c /home/august/Documents/projects/progbase2/tasks/uddp/src/list.c",
+  "file": "/home/august/Documents/projects/progbase2/tasks/uddp/src/list.c"
+}
+]
