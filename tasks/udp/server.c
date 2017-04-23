@@ -34,7 +34,7 @@ int main(void) {
     add -- add new string to queue\n\
     get -- see fist string in queue\n\
     all -- see all strings in queue\n\
-    delete -- removes first element in queue");
+    delete -- removes first element in queue\n");
 
     NetMessage * message = NetMessage_init(
         &(NetMessage){},  // value on stack

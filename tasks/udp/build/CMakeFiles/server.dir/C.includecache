@@ -14,7 +14,7 @@ stdbool.h
 
 ../include/queue.h
 
-/home/august/Documents/projects/progbase2/tasks/uddp/server.c
+/home/august/Documents/projects/progbase2/tasks/udp/server.c
 stdlib.h
 -
 stdio.h
@@ -30,7 +30,7 @@ string.h
 queue.h
 -
 
-/home/august/Documents/projects/progbase2/tasks/uddp/src/list.c
+/home/august/Documents/projects/progbase2/tasks/udp/src/list.c
 list.h
 -
 assert.h
@@ -42,7 +42,7 @@ string.h
 stdio.h
 -
 
-/home/august/Documents/projects/progbase2/tasks/uddp/src/queue.c
+/home/august/Documents/projects/progbase2/tasks/udp/src/queue.c
 queue.h
 -
 list.h

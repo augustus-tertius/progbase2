@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/august/Documents/projects/progbase2/tasks/uddp/client.c
+/home/august/Documents/projects/progbase2/tasks/udp/client.c
 stdlib.h
 -
 stdio.h

@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/august/Documents/projects/progbase2/tasks/uddp/client.c" "/home/august/Documents/projects/progbase2/tasks/uddp/build/CMakeFiles/client.dir/client.c.o"
+  "/home/august/Documents/projects/progbase2/tasks/udp/client.c" "/home/august/Documents/projects/progbase2/tasks/udp/build/CMakeFiles/client.dir/client.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

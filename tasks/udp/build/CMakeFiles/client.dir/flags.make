@@ -6,5 +6,5 @@ C_FLAGS = -g
 
 C_DEFINES = 
 
-C_INCLUDES = -I/home/august/Documents/projects/progbase2/tasks/uddp/include 
+C_INCLUDES = -I/home/august/Documents/projects/progbase2/tasks/udp/include 
 

@@ -1,4 +1,4 @@
-# Install script for directory: /home/august/Documents/projects/progbase2/tasks/uddp
+# Install script for directory: /home/august/Documents/projects/progbase2/tasks/udp
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/august/Documents/projects/progbase2/tasks/uddp/build/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/august/Documents/projects/progbase2/tasks/udp/build/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

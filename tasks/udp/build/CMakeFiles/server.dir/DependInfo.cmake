@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/august/Documents/projects/progbase2/tasks/uddp/server.c" "/home/august/Documents/projects/progbase2/tasks/uddp/build/CMakeFiles/server.dir/server.c.o"
-  "/home/august/Documents/projects/progbase2/tasks/uddp/src/list.c" "/home/august/Documents/projects/progbase2/tasks/uddp/build/CMakeFiles/server.dir/src/list.c.o"
-  "/home/august/Documents/projects/progbase2/tasks/uddp/src/queue.c" "/home/august/Documents/projects/progbase2/tasks/uddp/build/CMakeFiles/server.dir/src/queue.c.o"
+  "/home/august/Documents/projects/progbase2/tasks/udp/server.c" "/home/august/Documents/projects/progbase2/tasks/udp/build/CMakeFiles/server.dir/server.c.o"
+  "/home/august/Documents/projects/progbase2/tasks/udp/src/list.c" "/home/august/Documents/projects/progbase2/tasks/udp/build/CMakeFiles/server.dir/src/list.c.o"
+  "/home/august/Documents/projects/progbase2/tasks/udp/src/queue.c" "/home/august/Documents/projects/progbase2/tasks/udp/build/CMakeFiles/server.dir/src/queue.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/august/Documents/projects/progbase2/tasks/uddp
+CMAKE_SOURCE_DIR = /home/august/Documents/projects/progbase2/tasks/udp
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/august/Documents/projects/progbase2/tasks/uddp/build
+CMAKE_BINARY_DIR = /home/august/Documents/projects/progbase2/tasks/udp/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/server.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/server.dir/flags.make
 
 CMakeFiles/server.dir/server.c.o: CMakeFiles/server.dir/flags.make
 CMakeFiles/server.dir/server.c.o: ../server.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/august/Documents/projects/progbase2/tasks/uddp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/server.dir/server.c.o"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/server.dir/server.c.o   -c /home/august/Documents/projects/progbase2/tasks/uddp/server.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/august/Documents/projects/progbase2/tasks/udp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/server.dir/server.c.o"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/server.dir/server.c.o   -c /home/august/Documents/projects/progbase2/tasks/udp/server.c
 
 CMakeFiles/server.dir/server.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/server.dir/server.c.i"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/august/Documents/projects/progbase2/tasks/uddp/server.c > CMakeFiles/server.dir/server.c.i
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/august/Documents/projects/progbase2/tasks/udp/server.c > CMakeFiles/server.dir/server.c.i
 
 CMakeFiles/server.dir/server.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/server.dir/server.c.s"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/august/Documents/projects/progbase2/tasks/uddp/server.c -o CMakeFiles/server.dir/server.c.s
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/august/Documents/projects/progbase2/tasks/udp/server.c -o CMakeFiles/server.dir/server.c.s
 
 CMakeFiles/server.dir/server.c.o.requires:
 
@@ -83,16 +83,16 @@ CMakeFiles/server.dir/server.c.o.provides.build: CMakeFiles/server.dir/server.c.
 
 CMakeFiles/server.dir/src/queue.c.o: CMakeFiles/server.dir/flags.make
 CMakeFiles/server.dir/src/queue.c.o: ../src/queue.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/august/Documents/projects/progbase2/tasks/uddp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/server.dir/src/queue.c.o"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/server.dir/src/queue.c.o   -c /home/august/Documents/projects/progbase2/tasks/uddp/src/queue.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/august/Documents/projects/progbase2/tasks/udp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/server.dir/src/queue.c.o"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/server.dir/src/queue.c.o   -c /home/august/Documents/projects/progbase2/tasks/udp/src/queue.c
 
 CMakeFiles/server.dir/src/queue.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/server.dir/src/queue.c.i"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/august/Documents/projects/progbase2/tasks/uddp/src/queue.c > CMakeFiles/server.dir/src/queue.c.i
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/august/Documents/projects/progbase2/tasks/udp/src/queue.c > CMakeFiles/server.dir/src/queue.c.i
 
 CMakeFiles/server.dir/src/queue.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/server.dir/src/queue.c.s"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/august/Documents/projects/progbase2/tasks/uddp/src/queue.c -o CMakeFiles/server.dir/src/queue.c.s
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/august/Documents/projects/progbase2/tasks/udp/src/queue.c -o CMakeFiles/server.dir/src/queue.c.s
 
 CMakeFiles/server.dir/src/queue.c.o.requires:
 
@@ -107,16 +107,16 @@ CMakeFiles/server.dir/src/queue.c.o.provides.build: CMakeFiles/server.dir/src/qu
 
 CMakeFiles/server.dir/src/list.c.o: CMakeFiles/server.dir/flags.make
 CMakeFiles/server.dir/src/list.c.o: ../src/list.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/august/Documents/projects/progbase2/tasks/uddp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/server.dir/src/list.c.o"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/server.dir/src/list.c.o   -c /home/august/Documents/projects/progbase2/tasks/uddp/src/list.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/august/Documents/projects/progbase2/tasks/udp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building C object CMakeFiles/server.dir/src/list.c.o"
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/server.dir/src/list.c.o   -c /home/august/Documents/projects/progbase2/tasks/udp/src/list.c
 
 CMakeFiles/server.dir/src/list.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/server.dir/src/list.c.i"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/august/Documents/projects/progbase2/tasks/uddp/src/list.c > CMakeFiles/server.dir/src/list.c.i
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/august/Documents/projects/progbase2/tasks/udp/src/list.c > CMakeFiles/server.dir/src/list.c.i
 
 CMakeFiles/server.dir/src/list.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/server.dir/src/list.c.s"
-	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/august/Documents/projects/progbase2/tasks/uddp/src/list.c -o CMakeFiles/server.dir/src/list.c.s
+	/usr/bin/cc  $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/august/Documents/projects/progbase2/tasks/udp/src/list.c -o CMakeFiles/server.dir/src/list.c.s
 
 CMakeFiles/server.dir/src/list.c.o.requires:
 
@@ -143,7 +143,7 @@ server: CMakeFiles/server.dir/src/queue.c.o
 server: CMakeFiles/server.dir/src/list.c.o
 server: CMakeFiles/server.dir/build.make
 server: CMakeFiles/server.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/august/Documents/projects/progbase2/tasks/uddp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C executable server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/august/Documents/projects/progbase2/tasks/udp/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking C executable server"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/server.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -162,6 +162,6 @@ CMakeFiles/server.dir/clean:
 .PHONY : CMakeFiles/server.dir/clean
 
 CMakeFiles/server.dir/depend:
-	cd /home/august/Documents/projects/progbase2/tasks/uddp/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/august/Documents/projects/progbase2/tasks/uddp /home/august/Documents/projects/progbase2/tasks/uddp /home/august/Documents/projects/progbase2/tasks/uddp/build /home/august/Documents/projects/progbase2/tasks/uddp/build /home/august/Documents/projects/progbase2/tasks/uddp/build/CMakeFiles/server.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/august/Documents/projects/progbase2/tasks/udp/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/august/Documents/projects/progbase2/tasks/udp /home/august/Documents/projects/progbase2/tasks/udp /home/august/Documents/projects/progbase2/tasks/udp/build /home/august/Documents/projects/progbase2/tasks/udp/build /home/august/Documents/projects/progbase2/tasks/udp/build/CMakeFiles/server.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/server.dir/depend
 

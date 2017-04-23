@@ -14,6 +14,9 @@ Queue* Queue_new(void){
 }
 
 void Queue_free(Queue ** self){
+    for(int i = 0; i < List_count((*self)->l); i++){
+        free(List_get((*self)->l, i));
+    }
     List_free(&((*self)->l));
     free(&self);
 }
@@ -29,6 +32,7 @@ void Queue_add(Queue * self, void * ref){
 
 int Queue_removeFirst(Queue * self){
     if(!List_isEmpty(self->l)){
+        free(List_get(self->l, 0));
         List_removeAt(self->l, 0);
         return 0;
     } else{

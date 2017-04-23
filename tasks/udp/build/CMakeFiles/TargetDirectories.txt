@@ -1,4 +1,4 @@
-/home/august/Documents/projects/progbase2/tasks/uddp/build/CMakeFiles/rebuild_cache.dir
-/home/august/Documents/projects/progbase2/tasks/uddp/build/CMakeFiles/edit_cache.dir
-/home/august/Documents/projects/progbase2/tasks/uddp/build/CMakeFiles/client.dir
-/home/august/Documents/projects/progbase2/tasks/uddp/build/CMakeFiles/server.dir
+/home/august/Documents/projects/progbase2/tasks/udp/build/CMakeFiles/rebuild_cache.dir
+/home/august/Documents/projects/progbase2/tasks/udp/build/CMakeFiles/edit_cache.dir
+/home/august/Documents/projects/progbase2/tasks/udp/build/CMakeFiles/client.dir
+/home/august/Documents/projects/progbase2/tasks/udp/build/CMakeFiles/server.dir
