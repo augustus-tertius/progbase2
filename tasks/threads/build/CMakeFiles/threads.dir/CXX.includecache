@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../include/graphics.h
+
+/home/august/Documents/projects/progbase2/tasks/threads/main.cpp
+stdlib.h
+-
+stdio.h
+-
+math.h
+-
+thread
+-
+mutex
+-
+progbase.h
+-
+progbase-cpp/console.h
+-
+graphics.h
+-
+
+/home/august/Documents/projects/progbase2/tasks/threads/src/graphics.cpp
+math.h
+-
+progbase-cpp/console.h
+-
+graphics.h
+-
+

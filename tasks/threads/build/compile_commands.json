@@ -1,0 +1,12 @@
+[
+{
+  "directory": "/home/august/Documents/projects/progbase2/tasks/threads/build",
+  "command": "/usr/bin/c++    -I/home/august/Documents/projects/progbase2/tasks/threads/include  -std=c++11 -g   -o CMakeFiles/threads.dir/main.cpp.o -c /home/august/Documents/projects/progbase2/tasks/threads/main.cpp",
+  "file": "/home/august/Documents/projects/progbase2/tasks/threads/main.cpp"
+},
+{
+  "directory": "/home/august/Documents/projects/progbase2/tasks/threads/build",
+  "command": "/usr/bin/c++    -I/home/august/Documents/projects/progbase2/tasks/threads/include  -std=c++11 -g   -o CMakeFiles/threads.dir/src/graphics.cpp.o -c /home/august/Documents/projects/progbase2/tasks/threads/src/graphics.cpp",
+  "file": "/home/august/Documents/projects/progbase2/tasks/threads/src/graphics.cpp"
+}
+]
